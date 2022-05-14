@@ -1,21 +1,30 @@
 sidebar:
-    - title: "Welcome"
+    - title: Welcome
       page: index
 
-    - title: "Hello World"
+    - title: Hello World
       page: hello-world
 
-    - title: "Values"
+    - title: Values
       page: values
 
-    - title: "Variables"
+    - title: Variables
       page: variables
 
-    - title: "If/Else"
+    - title: Functions
+      page: functions
+
+    - title: If/Else
       page: if-else
 
-    - title: "Unit"
+    - title: Unit
       page: unit
 
-    - title: "Holes"
+    - title: Holes
       page: holes
+
+    - title: Tuples
+      page: tuples
+
+    - title: Collections
+      page: collections

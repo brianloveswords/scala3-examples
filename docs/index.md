@@ -15,10 +15,12 @@ $ brew install Virtuslab/scala-cli/scala-cli
 - [Hello World](hello-world.html)
 - [Values](values.html)
 - [Variables](variables.html)
+- [Functions](functions.html)
 - [If/Else](if-else.html)
 - [Unit](unit.html)
 - [Holes](holes.html)
-- For
+- [Tuples](tuples.html)
+- [Collections](collections.html)
 - Switch
 - Arrays
 - Slices
