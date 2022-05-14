@@ -7,3 +7,6 @@ sidebar:
 
     - title: "Values"
       page: values
+
+    - title: "Variables"
+      page: variables
