@@ -2,4 +2,4 @@
 
 set -euo pipefail
 
-cd output && caddy file-server
+cd output && python -m http.server 8000

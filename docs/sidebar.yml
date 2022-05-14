@@ -3,4 +3,4 @@ sidebar:
       page: index
 
     - title: "Hello World"
-      page: ignore
+      page: hello-world
