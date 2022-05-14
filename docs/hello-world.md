@@ -33,7 +33,7 @@ In Scala 2, all methods needed to be wrapped in a top-level object but that's no
 The `System.out.println` can be shortened to just `println`—it's assumed you're printing to stdout. If you want to print to stderr, you can use `System.err.println`.
 The `s` in front of the string literal is a string interpolator. It will call `.toStrg` on the interpolated object and put it in the string.
 
-Because Scala runs on the JDK, everything has a `.toString` method, whether it's useful or not, so sometimes this can lead to surprising results. Try removing the `(0)` after `args` on line 3 and see what prints.
+Scala runs on the Java Virtual Machine, and in Java everything inherits from capital-O `Object` which comes with a default `.toString` implementation. This means anything can be interpolated whether it's useful or not. Try removing the `(0)` after `args` on line 3 and see what prints.
 
 
 # Shortened version

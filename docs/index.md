@@ -21,6 +21,8 @@ $ brew install Virtuslab/scala-cli/scala-cli
 - [Holes](holes.html)
 - [Tuples](tuples.html)
 - [Case Classes](case-classes.html)
+- [Options](options.html)
+- [Eithers](eithers.html)
 - [Collections](collections.html)
 - Switch
 - Arrays

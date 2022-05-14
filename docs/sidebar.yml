@@ -29,5 +29,11 @@ sidebar:
     - title: Case Classes
       page: case-classes
 
+    - title: Options
+      page: options
+
+    - title: Eithers
+      page: eithers
+
     - title: Collections
       page: collections
