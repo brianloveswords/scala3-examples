@@ -13,7 +13,11 @@ object Main:
 
 _Note: if you hit the_ &nbsp;▶️ _button above, this will attempt to run, but it will fail because there's no way to pass a command line flag this way. You can edit `name` to be a static string and hit `Cmd+Enter` to run it and it should work._
 
-If you are using `scala-cli` to follow along, put this into a file called `hello-world.scala` and run `scala-cli hello-world.scala -- your-name-here` to run it with a command line argument.
+If you are using `scala-cli` to follow along, put this into a file called `hello-world.scala`.
+
+```
+$ scala-cli hello-world.scala -- "your-name-here"
+```
 
 A few things about this code:
 
