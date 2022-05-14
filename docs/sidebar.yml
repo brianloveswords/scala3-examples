@@ -1,0 +1,6 @@
+sidebar:
+    - title: "Welcome"
+      page: index
+
+    - title: "Hello World"
+      page: ignore
