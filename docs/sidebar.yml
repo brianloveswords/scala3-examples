@@ -4,3 +4,6 @@ sidebar:
 
     - title: "Hello World"
       page: hello-world
+
+    - title: "Values"
+      page: values

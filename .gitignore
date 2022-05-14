@@ -1,2 +1,5 @@
-.bloop
 output
+.bloop
+.bsp
+.scala-build
+.metals

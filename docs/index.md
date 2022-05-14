@@ -6,8 +6,14 @@ folks to Scala, particularly Scala 3.
 I'm riffing on [Go by example](https://gobyexample.com/), so you may notice a
 similar progression.
 
+Many of these examples will run in the browser, but [I recommend downloading `scala-cli`](https://scala-cli.virtuslab.org/) and running them that way:
+
+```bash
+$ brew install Virtuslab/scala-cli/scala-cli
+``
+
 - [Hello World](hello-world.html)
-- Values
+- [Values](values.html)
 - Variables
 - Constants
 - For
