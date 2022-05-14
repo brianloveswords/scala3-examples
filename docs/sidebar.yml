@@ -10,3 +10,12 @@ sidebar:
 
     - title: "Variables"
       page: variables
+
+    - title: "If/Else"
+      page: if-else
+
+    - title: "Unit"
+      page: unit
+
+    - title: "Holes"
+      page: holes

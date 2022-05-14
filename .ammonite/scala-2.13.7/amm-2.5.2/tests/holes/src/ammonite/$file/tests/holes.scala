@@ -35,11 +35,16 @@ import _root_.ammonite.repl.tools.Util.{
 }
 
 
-object values{
-/*<script>*//*<amm>*/val res_0 = /*</amm>*/println("sca" + "la")
-/*<amm>*/val res_1 = /*</amm>*/???
+object holes{
+/*<script>*/def calculatePrice(
+    units: Int,
+    quantity: Int,
+    listPrice: BigDecimal
+): BigDecimal = ???
+
+/*<amm>*/val res_1 = /*</amm>*/calculatePrice(2, 9, BigDecimal(3.99))
 /*</script>*/ /*<generated>*/
 def $main() = { scala.Iterator[String]() }
-  override def toString = "values"
+  override def toString = "holes"
   /*</generated>*/
 }

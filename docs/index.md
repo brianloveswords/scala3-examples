@@ -10,14 +10,15 @@ Many of these examples will run in the browser, but [I recommend downloading `sc
 
 ```bash
 $ brew install Virtuslab/scala-cli/scala-cli
-``
+```
 
 - [Hello World](hello-world.html)
 - [Values](values.html)
-- Variables
-- Constants
+- [Variables](variables.html)
+- [If/Else](if-else.html)
+- [Unit](unit.html)
+- [Holes](holes.html)
 - For
-- If/Else
 - Switch
 - Arrays
 - Slices
