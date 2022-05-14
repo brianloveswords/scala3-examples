@@ -26,5 +26,8 @@ sidebar:
     - title: Tuples
       page: tuples
 
+    - title: Case Classes
+      page: case-classes
+
     - title: Collections
       page: collections
