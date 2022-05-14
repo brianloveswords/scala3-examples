@@ -35,5 +35,8 @@ sidebar:
     - title: Eithers
       page: eithers
 
+    - title: Enums
+      page: enums
+
     - title: Collections
       page: collections
