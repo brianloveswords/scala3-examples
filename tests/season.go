@@ -22,6 +22,9 @@ func (s Season) String() string {
 	case Spring:
 		return "Spring"
 	}
+	// the switch statement covers all the cases,
+	// but the compiler doesn't know that so we must
+	// include this even though it's unreachable.
 	return "unknown"
 }
 
