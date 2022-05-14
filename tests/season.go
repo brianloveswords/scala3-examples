@@ -1,4 +1,3 @@
-// from https://www.sohamkamani.com/golang/enums/
 package main
 
 import "fmt"
@@ -20,13 +19,13 @@ func (s Season) String() string {
 		return "autumn"
 	case Winter:
 		return "winter"
+	case Spring:
+		return "Spring"
 	}
 	return "unknown"
 }
 
 func main() {
 	x := Spring
-
-	// will print "unknown"
-	fmt.Println(x.String())
+	fmt.Println(x)
 }
