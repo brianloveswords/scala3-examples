@@ -24,8 +24,8 @@ $ brew install Virtuslab/scala-cli/scala-cli
 - [Options](options.html)
 - [Eithers](eithers.html)
 - [Enums](enums.html)
-- [Collections](collections.html)
-- Switch
+- [Traits](traits.html)
+- [Lists](lists.html)
 - Arrays
 - Slices
 - Maps

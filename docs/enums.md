@@ -50,7 +50,7 @@ still an `int64` in disguise.
 In Scala, we would model this data with an `enum`. When we do this, we are
 *inventing a whole new type that did not exist before*. These are not
 internally represented by strings or ints or anything else! We get to invent
-terms from whole cloth that are legal within that brand new type.
+terms from whole cloth that inhabit that brand new type.
 
 ```scala
 enum Season:

@@ -38,5 +38,8 @@ sidebar:
     - title: Enums
       page: enums
 
-    - title: Collections
-      page: collections
+    - title: Traits
+      page: traits
+
+    - title: Lists
+      page: lists
