@@ -1,7 +1,8 @@
 # Traits
 
 
-`traits` are Scala's way of representing interfaces.
+`traits` are Scala's tool for describing interfaces, also known as protocols
+in Python, and sharing implementations.
 
 ```scala
 trait Geometry:
@@ -39,14 +40,13 @@ measure(r)
 measure(c)
 ```
 
-
 ## Case class parameters as member implemenations
 
 The `name` fields in the case classes below count as implementations for the
 `name` method in the `Humanoid` trait.
 
 ```scala
-// if we leave off the val, the `emoji`
+// If we leave off the val, the `emoji`
 // field is private and cannot be accessed
 // outside of the trait
 trait Humanoid(val emoji: String):
@@ -73,3 +73,16 @@ println(p.shoutHello)
 println(r.shoutHello)
 println(r.emoji)
 ```
+
+## Programming to interfaces
+
+Whenever possible, functions should take traits as parameters, not concrete
+implementations. If there is a hierarchy of traits, functions should take the
+trait closest to the top of the hierarchy—the one with the least "power"
+necessary to perform the task.
+
+We'll come back to `traits` when we talk about implementing services that need
+to interact with the outside world, like HTTP and SQL clients. Making sure
+that functions that need to use the service take the trait, not the concrete
+implementation, will allow us to test our code by supplying fakes during
+testing that do not have to use the network.
