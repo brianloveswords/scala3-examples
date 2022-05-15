@@ -43,3 +43,6 @@ sidebar:
 
     - title: Lists
       page: lists
+
+    - title: map and flatMap
+      page: flatmap

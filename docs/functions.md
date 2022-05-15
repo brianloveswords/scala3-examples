@@ -1,9 +1,11 @@
 # Functions
 
-Functions in Scala are defined with the keyword `def`:
+Functions in Scala are defined with the keyword `def`. The result of the last
+expression in the function body is the return value.
 
 ```scala
-def add(x: Int, y: Int): Int = x + y
+def add(x: Int, y: Int): Int =
+  x + y
 
 println(add(1, 2))
 ```
@@ -23,7 +25,8 @@ println(multiply(3, 4))
 It is frequently useful to be able to take a function and bake in one of the parameters, returning a new function that takes the remaining parameter. This is called **partial application**:
 
 ```scala
-def add(x: Int, y: Int): Int = x + y
+def add(x: Int, y: Int): Int =
+  x + y
 
 // when `_` is on the right side of the assignment,
 // it acts as a placeholder for parameters

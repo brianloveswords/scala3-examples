@@ -52,9 +52,20 @@ The `name` fields in the case classes below count as implementations for the
 trait Humanoid(val emoji: String):
   def name: String
 
+  // We can provide default implementations so
+  // long as they only reference properties known
+  // to the trait
   def shoutHello: String =
     s"${emoji}: Hello, I'm ${name}".toUpperCase
 
+// We can define companion objects for traits,
+// and if we define an `apply` method, we can
+// choose a "default" instance for the trait
+// and let users instantiate that without having
+// to care about the underlying concrete type.
+object Humanoid:
+  def apply(name: String): Humanoid =
+    Robot(name)
 
 case class Person(
   name: String,
@@ -67,7 +78,7 @@ case class Robot(
 
 
 val p = Person("John", age = 42)
-val r = Robot("Bender")
+val r = Humanoid("Bender")
 
 println(p.shoutHello)
 println(r.shoutHello)

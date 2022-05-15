@@ -1,23 +1,27 @@
-// if we leave off the val, the `emoji`
-// field remains private
-trait Humanoid(emoji: String):
-  def name: String
+case class ValidatedInput private (value: Int)
 
-  def shoutHello: String =
-    s"${emoji}: Hello, I'm ${name}".toUpperCase
+object ValidatedInput:
+  def parse(input: String): Option[ValidatedInput] =
+    input.toIntOption
+      .filter(_ < 10)
+      .map(new ValidatedInput(_))
 
-case class Person(
-    name: String,
-    age: Int
-) extends Humanoid("👤")
+def businessLogic(validated: ValidatedInput): Int =
+  validated.value * 7 - 1
 
-case class Robot(
-    name: String
-) extends Humanoid("🤖")
+def encode(a: Int): String =
+  "~" + a.toString.reverse + "!"
 
-val p = Person("John", age = 42)
-val r = Robot("Bender")
+def program(a: String): Option[String] =
+  val validated = ValidatedInput.parse(a)
+  validated
+    .map(businessLogic)
+    .map(encode)
 
-println(p.shoutHello)
-println(r.shoutHello)
-println(r.emoji)
+val result1 = program("8")
+val result2 = program("22")
+val result3 = program("nope")
+
+println(result1)
+println(result2)
+println(result3)

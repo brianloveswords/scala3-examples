@@ -26,7 +26,7 @@ $ brew install Virtuslab/scala-cli/scala-cli
 - [Enums](enums.html)
 - [Traits](traits.html)
 - [Lists](lists.html)
-- Arrays
+- [map and flatMap](flatmap.html)
 - Slices
 - Maps
 - Range
