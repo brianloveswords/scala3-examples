@@ -8,7 +8,7 @@ similar progression.
 
 Many of these examples will run in the browser, but [I recommend downloading `scala-cli`](https://scala-cli.virtuslab.org/) and running them that way:
 
-```bash
+```shell
 $ brew install Virtuslab/scala-cli/scala-cli
 ```
 
@@ -26,7 +26,7 @@ $ brew install Virtuslab/scala-cli/scala-cli
 - [Enums](enums.html)
 - [Traits](traits.html)
 - [Lists](lists.html)
-- [map and flatMap](flatmap.html)
+- [Smart Constructors](smart-constructors.html)
 - Slices
 - Maps
 - Range

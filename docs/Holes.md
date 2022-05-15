@@ -15,7 +15,7 @@ def calculatePrice(
 calculatePrice(2, 9, BigDecimal(3.99))
 ```
 
-```bash
+```shell
 $ scala-cli holes.sc
 ```
 

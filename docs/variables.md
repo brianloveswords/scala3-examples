@@ -30,7 +30,7 @@ println("2nd times the charm")
 println(times)
 ```
 
-```bash
+```shell
 $ scala-cli lazy-val.sc
 ```
 

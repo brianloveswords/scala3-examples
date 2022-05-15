@@ -44,5 +44,5 @@ sidebar:
     - title: Lists
       page: lists
 
-    - title: map and flatMap
-      page: flatmap
+    - title: Smart Constructors
+      page: smart-constructors

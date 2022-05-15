@@ -10,7 +10,7 @@ val result = println("hmmm")
 println(result)
 ```
 
-```bash
+```shell
 $ scala-cli unit.sc
 ```
 
