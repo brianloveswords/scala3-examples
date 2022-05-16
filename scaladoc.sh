@@ -6,8 +6,9 @@ INPUT_DIR=_docs
 OUTPUT_DIR=docs
 
 function main {
-    mkdir -p docs
+    mkdir -p ${OUTPUT_DIR}
 
+    echo "starting build"
     scaladoc \
         -project-version "1.0.0" \
         \
@@ -20,9 +21,9 @@ function main {
         -snippet-compiler:${INPUT_DIR}=compile \
         -siteroot ${INPUT_DIR} \
         -classpath "vendor/cats-core_3-2.7.0.jar:vendor/cats-effect_3-3.4-389-3862cf0.jar" \
-        . # -Ygenerate-inkuire \
+        . # -Ygenerate-inkuire
 
-    ./serve.sh
+    echo "done building"
 }
 
 main
