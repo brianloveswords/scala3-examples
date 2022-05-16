@@ -2,6 +2,15 @@
     "files.watcherExclude": {
         "**/target": true,
         "**/.bloop": true,
-        "**/.metals": true
+        "**/.metals": true,
+        "**/docs": true
+    },
+    "files.exclude": {
+        "**/.git": true,
+        "**/.bloop": true,
+        "**/.bsp": true,
+        "**/.scala-build": true,
+        "**/.metals": true,
+        "**/docs": true
     }
 }

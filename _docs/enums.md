@@ -7,6 +7,7 @@ In other languages, an enumeration is a set of named constants that point to
 concrete values that are already part of the type system. There is usually a
 type alias to help with readability.
 
+
 ```go
 package main
 
