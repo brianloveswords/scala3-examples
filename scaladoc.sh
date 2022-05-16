@@ -3,7 +3,7 @@
 set -euo pipefail
 
 function main {
-    mkdir -p output
+    mkdir -p docs
 
     scaladoc \
         -project-version "1.0.0" \
@@ -12,10 +12,10 @@ function main {
         -default-template "static-site-main" \
         -author \
         -groups \
-        -d "output" \
+        -d "docs" \
         -project "Scala 3 By Example" \
-        -snippet-compiler:docs=compile \
-        -siteroot "docs" \
+        -snippet-compiler:_docs=compile \
+        -siteroot "_docs" \
         -classpath "vendor/cats-core_3-2.7.0.jar:vendor/cats-effect_3-3.4-389-3862cf0.jar" \
         . # -Ygenerate-inkuire \
 
