@@ -30,5 +30,9 @@ func (s Season) String() string {
 
 func main() {
 	x := Spring
+
+	y := Spring * 9
+
 	fmt.Println(x)
+	fmt.Println(y)
 }

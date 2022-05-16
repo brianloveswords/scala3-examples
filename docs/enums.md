@@ -39,13 +39,19 @@ func (s Season) String() string {
 }
 
 func main() {
-	x := Spring
-	fmt.Println(x)
+	spring := Spring
+	fmt.Println(spring)
+
+  // oh no
+  fmt.Println(spring * 10)
 }
 ```
 
-The opaque type alias `Season` makes this a bit safer, but internally it is
-still an `int64` in disguise.
+The opaque type alias `Season` makes this a bit safer, since you can define
+functions that take `Season` and they won't take cannot accept `int`, but
+nothing stops you from doing `int` operations on a `Season` once you do have
+hold of one. To the Go compiler, `Season` is an `int` in an ill-fitting
+disguise.
 
 In Scala, we would model this data with an `enum`. When we do this, we are
 *inventing a whole new type that did not exist before*. These are not
