@@ -1,0 +1,292 @@
+<html><head><meta charset="utf-8"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><title>Smart Constructors</title><link rel="shortcut icon" type="image/x-icon" href="favicon.ico"></link><script type="text/javascript" src="scripts/theme.js"></script><script type="text/javascript" src="scripts/searchData.js" defer="true"></script><script type="text/javascript" src="scripts/scastieConfiguration.js" defer="true"></script><link rel="stylesheet" href="styles/nord-light.css"></link><link rel="stylesheet" href="styles/scalastyle.css"></link><link rel="stylesheet" href="styles/colors.css"></link><link rel="stylesheet" href="styles/dotty-icons.css"></link><link rel="stylesheet" href="styles/diagram.css"></link><link rel="stylesheet" href="styles/filter-bar.css"></link><link rel="stylesheet" href="styles/code-snippets.css"></link><link rel="stylesheet" href="styles/searchbar.css"></link><link rel="stylesheet" href="styles/social-links.css"></link><link rel="stylesheet" href="styles/ux.css"></link><link rel="stylesheet" href="styles/versions-dropdown.css"></link><link rel="stylesheet" href="styles/fontawesome.css"></link><script type="text/javascript" src="hljs/highlight.pack.js" defer="true"></script><script type="text/javascript" src="scripts/hljs-scala3.js" defer="true"></script><script type="text/javascript" src="scripts/ux.js" defer="true"></script><script type="text/javascript" src="scripts/common/component.js" defer="true"></script><script type="text/javascript" src="scripts/common/utils.js" defer="true"></script><script type="text/javascript" src="scripts/components/FilterBar.js" defer="true"></script><script type="text/javascript" src="scripts/components/DocumentableList.js" defer="true"></script><script type="text/javascript" src="scripts/components/Input.js" defer="true"></script><script type="text/javascript" src="scripts/components/FilterGroup.js" defer="true"></script><script type="text/javascript" src="scripts/components/Filter.js" defer="true"></script><script type="text/javascript" src="scripts/scaladoc-scalajs.js" defer="true"></script><script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js" defer="true"></script><script type="text/javascript" src="https://d3js.org/d3.v6.min.js" defer="true"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/graphlib-dot@0.6.2/dist/graphlib-dot.min.js" defer="true"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dagre-d3/0.6.1/dagre-d3.min.js" defer="true"></script><script type="text/javascript" src="https://scastie.scala-lang.org/embedded.js" defer="true"></script><script type="text/javascript" src="scripts/data.js" defer="true"></script><script>var pathToRoot = "";</script></head><body><div id="container"><div id="leftColumn"><div id="logo"><span><div class="projectName">Scala 3 By Example</div></span><div id="version"><div class="versions-dropdown"><div onclick="dropdownHandler()" id="dropdown-button" class="dropdownbtn dropdownbtnactive"><div class="projectVersion">1.0.0</div><div id="dropdown-content" class="dropdown-content"><input type="text" placeholder="Search..." id="dropdown-input" onkeyup="filterFunction()"></input></div></div></div></div><div class="socials"><a href="https://github.com/brianloveswords/scala3-examples"><span class="social-icon" data-icon-path="github-icon-white.png"></span></a><a href="https://twitter.com/brianloveswords"><span class="social-icon" data-icon-path="twitter-icon-white.png"></span></a></div></div><div id="paneSearch"></div><nav id="sideMenu2"><div class="ni expanded"><span class="nh expanded"><span class="ar"></span><a href="docs/index.html"><span>Scala 3 By Example</span></a></span><div class="ni "><span class="nh "><a href="index.html"><span>Welcome</span></a></span></div><div class="ni "><span class="nh "><a href="hello-world.html"><span>Hello World</span></a></span></div><div class="ni "><span class="nh "><a href="values.html"><span>Values</span></a></span></div><div class="ni "><span class="nh "><a href="variables.html"><span>Variables</span></a></span></div><div class="ni "><span class="nh "><a href="functions.html"><span>Functions</span></a></span></div><div class="ni "><span class="nh "><a href="if-else.html"><span>If/Else</span></a></span></div><div class="ni "><span class="nh "><a href="unit.html"><span>Unit</span></a></span></div><div class="ni "><span class="nh "><a href="holes.html"><span>Holes</span></a></span></div><div class="ni "><span class="nh "><a href="tuples.html"><span>Tuples</span></a></span></div><div class="ni "><span class="nh "><a href="case-classes.html"><span>Case Classes</span></a></span></div><div class="ni "><span class="nh "><a href="options.html"><span>Options</span></a></span></div><div class="ni "><span class="nh "><a href="eithers.html"><span>Eithers</span></a></span></div><div class="ni "><span class="nh "><a href="enums.html"><span>Enums</span></a></span></div><div class="ni "><span class="nh "><a href="traits.html"><span>Traits</span></a></span></div><div class="ni "><span class="nh "><a href="lists.html"><span>Lists</span></a></span></div><div class="ni expanded"><span class="nh selected"><a href="smart-constructors.html"><span>Smart Constructors</span></a></span></div><div class="ni"><span class="nh "><span class="ar"></span><a href="api/index.html"><span>API</span></a></span><div class="ni"><span class="nh "><span class="ar"></span><a href="_empty_.html"><span class="micon pa"></span><span>&lt;empty&gt;</span></a></span><div class="ni "><span class="nh "><a href="_empty_/holes$.html"><span class="micon ob"></span><span>holes</span></a></span></div><div class="ni "><span class="nh "><a href="_empty_/holes_sc$.html"><span class="micon ob"></span><span>holes_sc</span></a></span></div><div class="ni "><span class="nh "><a href="_empty_/main.html"><span class="micon cl"></span><span>main</span></a></span></div><div class="ni"><span class="nh "><span class="ar"></span><a href="_empty_/values$.html"><span class="micon ob"></span><span>values</span></a></span><div class="ni"><span class="nh "><span class="ar"></span><a href="_empty_/values$$Error.html"><span class="micon en"></span><span>Error</span></a></span><div class="ni "><span class="nh "><a href="_empty_/values$$Error$$TooLow.html"><span class="micon ca"></span><span>TooLow</span></a></span></div><div class="ni "><span class="nh "><a href="_empty_/values$$Error$$TooHigh.html"><span class="micon ca"></span><span>TooHigh</span></a></span></div><div class="ni "><span class="nh "><a href="_empty_/values$$Error$$NotANumber.html"><span class="micon ca"></span><span>NotANumber</span></a></span></div></div><div class="ni "><span class="nh "><a href="_empty_/values$$Volume.html"><span class="micon cl"></span><span>Volume</span></a></span></div><div class="ni "><span class="nh "><a href="_empty_/values$$Volume$.html"><span class="micon ob"></span><span>Volume</span></a></span></div></div><div class="ni "><span class="nh "><a href="_empty_/values_sc$.html"><span class="micon ob"></span><span>values_sc</span></a></span></div></div><div class="ni"><span class="nh "><span class="ar"></span><a href="tests.html"><span class="micon pa"></span><span>tests</span></a></span><div class="ni "><span class="nh "><a href="tests/holes$.html"><span class="micon ob"></span><span>holes</span></a></span></div><div class="ni "><span class="nh "><a href="tests/holes_sc$.html"><span class="micon ob"></span><span>holes_sc</span></a></span></div><div class="ni"><span class="nh "><span class="ar"></span><a href="tests/values$.html"><span class="micon ob"></span><span>values</span></a></span><div class="ni "><span class="nh "><a href="tests/values$$Channel.html"><span class="micon cl"></span><span>Channel</span></a></span></div><div class="ni"><span class="nh "><span class="ar"></span><a href="tests/values$$Error.html"><span class="micon en"></span><span>Error</span></a></span><div class="ni "><span class="nh "><a href="tests/values$$Error$$TooLow.html"><span class="micon ca"></span><span>TooLow</span></a></span></div><div class="ni "><span class="nh "><a href="tests/values$$Error$$TooHigh.html"><span class="micon ca"></span><span>TooHigh</span></a></span></div><div class="ni "><span class="nh "><a href="tests/values$$Error$$NotANumber.html"><span class="micon ca"></span><span>NotANumber</span></a></span></div></div><div class="ni "><span class="nh "><a href="tests/values$$Volume.html"><span class="micon cl"></span><span>Volume</span></a></span></div><div class="ni "><span class="nh "><a href="tests/values$$Volume$.html"><span class="micon ob"></span><span>Volume</span></a></span></div></div><div class="ni "><span class="nh "><a href="tests/values_sc$.html"><span class="micon ob"></span><span>values_sc</span></a></span></div></div></div></div></nav></div><div id="main"><div id="leftToggler"><span class="icon-toggler"></span></div><div id="scaladoc-searchBar"></div><main id="main-content"><div class="breadcrumbs container"><a href="docs/index.html">Scala 3 By Example</a>/<a href="smart-constructors.html">Smart Constructors</a></div><div id="content"><html>
+ <head></head>
+ <body>
+  <h1><a href="#smart-constructors" id="smart-constructors" class="anchor"></a>Smart Constructors</h1> 
+  <p>We showed using things like <code>map</code> and <code>filter</code> on lists in the previous section:</p> 
+  <div class="snippet" scala-snippet>
+   <div class="buttons"></div>
+   <pre><code class="language-scala"><span id="0" class=""><span class="tooltip-container"></span>val xs = List(1, 2, 3)
+</span><span id="1" class=""><span class="tooltip-container"></span>println(xs.filter(_ &gt; 1).map(_ + 1))
+</span></code></pre>
+  </div> 
+  <p>We can also use many of these functions on other containers, like <code>Option</code>. By using these functions on <code>Option</code>s, we can code down the "happy" path and defer when we want to deal with the possibility of <code>None</code> until we need the raw wrapped value.</p> 
+  <div class="snippet" scala-snippet>
+   <div class="buttons"></div>
+   <pre><code class="language-scala"><span id="0" class=""><span class="tooltip-container"></span>def parseVolume(s: String): Option[Byte] =
+</span><span id="1" class=""><span class="tooltip-container"></span>  s.toByteOption.filter(_ &gt;= 0).filter(_ &lt;= 100)
+</span><span id="2" class=""><span class="tooltip-container"></span>
+</span><span id="3" class=""><span class="tooltip-container"></span>// theoretically this should only get
+</span><span id="4" class=""><span class="tooltip-container"></span>// called once we have a parsed volume
+</span><span id="5" class=""><span class="tooltip-container"></span>def volumeIcon(volume: Byte): String =
+</span><span id="6" class=""><span class="tooltip-container"></span>  require(volume &gt;= 0 &amp;&amp; volume &lt;= 100, "Invalid volume")
+</span><span id="7" class=""><span class="tooltip-container"></span>  volume match
+</span><span id="8" class=""><span class="tooltip-container"></span>    case v if v &gt;= 66 =&gt; "🔊"
+</span><span id="9" class=""><span class="tooltip-container"></span>    case v if v &gt;= 33 =&gt; "🔉"
+</span><span id="10" class=""><span class="tooltip-container"></span>    case v if v &gt; 0   =&gt; "🔈"
+</span><span id="11" class=""><span class="tooltip-container"></span>    case v if v == 0  =&gt; "🔇"
+</span><span id="12" class=""><span class="tooltip-container"></span>
+</span><span id="13" class=""><span class="tooltip-container"></span>def businessLogic(volume: Byte): Unit =
+</span><span id="14" class=""><span class="tooltip-container"></span>  val icon = volumeIcon(volume)
+</span><span id="15" class=""><span class="tooltip-container"></span>  println(s"[${icon}] setting volume to ${cyan(volume)}")
+</span><span id="16" class=""><span class="tooltip-container"></span>
+</span><span id="17" class=""><span class="tooltip-container"></span>def program(a: String): Unit = parseVolume(a)
+</span><span id="18" class=""><span class="tooltip-container"></span>  .map(businessLogic)
+</span><span id="19" class=""><span class="tooltip-container"></span>  .getOrElse(printError)
+</span><span id="20" class=""><span class="tooltip-container"></span>
+</span><span id="21" class=""><span class="tooltip-container"></span>def printError: Unit =
+</span><span id="22" class=""><span class="tooltip-container"></span>  println("[😞] " + red("must be a number between 0 and 100"))
+</span><span id="23" class=""><span class="tooltip-container"></span>
+</span><span id="24" class=""><span class="tooltip-container"></span>def cyan(s: Any): String =
+</span><span id="25" class=""><span class="tooltip-container"></span>  Console.CYAN + s.toString + Console.RESET
+</span><span id="26" class=""><span class="tooltip-container"></span>
+</span><span id="27" class=""><span class="tooltip-container"></span>def red(s: Any): String =
+</span><span id="28" class=""><span class="tooltip-container"></span>  Console.RED + s.toString + Console.RESET
+</span><span id="29" class=""><span class="tooltip-container"></span>
+</span><span id="30" class=""><span class="tooltip-container"></span>val inputs = List("0", "8", "36", "75", "101", "nope", "-10")
+</span><span id="31" class=""><span class="tooltip-container"></span>inputs.foreach(program)
+</span></code></pre>
+  </div> 
+  <p><code>parseVolume</code> makes sure we have a valid number between 0 and 100, but unfortunately it keeps that knowledge to itself—there's nothing in the return type <code>Option[Byte]</code> to indicate we have a valid volume. Let's fix that!</p> 
+  <div class="snippet" scala-snippet>
+   <div class="buttons"></div>
+   <pre><code class="language-scala"><span id="0" class=""><span class="tooltip-container"></span>object Volume:
+</span><span id="1" class=""><span class="tooltip-container"></span>  val MinValue = 0
+</span><span id="2" class=""><span class="tooltip-container"></span>  val MaxValue = 100
+</span><span id="3" class=""><span class="tooltip-container"></span>
+</span><span id="4" class=""><span class="tooltip-container"></span>  def parse(s: String): Option[Volume] = s.toByteOption
+</span><span id="5" class=""><span class="tooltip-container"></span>    .filter(_ &gt;= MinValue)
+</span><span id="6" class=""><span class="tooltip-container"></span>    .filter(_ &lt;= MaxValue)
+</span><span id="7" class=""><span class="tooltip-container"></span>    .map(Volume(_))
+</span><span id="8" class=""><span class="tooltip-container"></span>
+</span><span id="9" class=""><span class="tooltip-container"></span>// the `private` prevents Volume from being constructed
+</span><span id="10" class=""><span class="tooltip-container"></span>// directly, which forces users to go through `Volume.parse`
+</span><span id="11" class=""><span class="tooltip-container"></span>case class Volume private (value: Byte):
+</span><span id="12" class=""><span class="tooltip-container"></span>  // it's useful to keep this assertion for fuzz testing
+</span><span id="13" class=""><span class="tooltip-container"></span>  // and making sure the internal functions are correct
+</span><span id="14" class=""><span class="tooltip-container"></span>  require(
+</span><span id="15" class=""><span class="tooltip-container"></span>    value &gt;= Volume.MinValue &amp;&amp; value &lt;= Volume.MaxValue,
+</span><span id="16" class=""><span class="tooltip-container"></span>    s"Invalid volume: ${value}"
+</span><span id="17" class=""><span class="tooltip-container"></span>  )
+</span><span id="18" class=""><span class="tooltip-container"></span>
+</span><span id="19" class=""><span class="tooltip-container"></span>  def icon: String = value match
+</span><span id="20" class=""><span class="tooltip-container"></span>    case v if v &gt;= 66 =&gt; "🔊"
+</span><span id="21" class=""><span class="tooltip-container"></span>    case v if v &gt;= 33 =&gt; "🔉"
+</span><span id="22" class=""><span class="tooltip-container"></span>    case v if v &gt; 0   =&gt; "🔈"
+</span><span id="23" class=""><span class="tooltip-container"></span>    case v if v == 0  =&gt; "🔇"
+</span><span id="24" class=""><span class="tooltip-container"></span>
+</span><span id="25" class=""><span class="tooltip-container"></span>def businessLogic(volume: Volume): Unit =
+</span><span id="26" class=""><span class="tooltip-container"></span>  println(s"[${volume.icon}] setting volume to ${cyan(volume.value)}")
+</span><span id="27" class=""><span class="tooltip-container"></span>
+</span><span id="28" class=""><span class="tooltip-container"></span>def program(a: String): Unit = Volume
+</span><span id="29" class=""><span class="tooltip-container"></span>  .parse(a)
+</span><span id="30" class=""><span class="tooltip-container"></span>  .map(businessLogic)
+</span><span id="31" class=""><span class="tooltip-container"></span>  .getOrElse(printError)
+</span><span id="32" class=""><span class="tooltip-container"></span>
+</span><span id="33" class=""><span class="tooltip-container"></span>// everything else stays the same
+</span><span id="34" class=""><span class="tooltip-container"></span>
+</span><span id="36" class="hideable"><span class="tooltip-container"></span>def printError: Unit =
+</span><span id="37" class="hideable"><span class="tooltip-container"></span>  println("[😞] " + red("must be a number between 0 and 100"))
+</span><span id="38" class="hideable"><span class="tooltip-container"></span>
+</span><span id="39" class="hideable"><span class="tooltip-container"></span>def cyan(s: Any): String =
+</span><span id="40" class="hideable"><span class="tooltip-container"></span>  Console.CYAN + s.toString + Console.RESET
+</span><span id="41" class="hideable"><span class="tooltip-container"></span>
+</span><span id="42" class="hideable"><span class="tooltip-container"></span>def red(s: Any): String =
+</span><span id="43" class="hideable"><span class="tooltip-container"></span>  Console.RED + s.toString + Console.RESET
+</span><span id="44" class="hideable"><span class="tooltip-container"></span>
+</span><span id="45" class="hideable"><span class="tooltip-container"></span>val inputs = List("0", "8", "36", "75", "101", "nope", "-10")
+</span><span id="46" class="hideable"><span class="tooltip-container"></span>inputs.foreach(program)
+</span></code></pre>
+  </div> 
+  <p>This is better! We now keep track of the fact we've validated the input in the type system by using <code>Volume</code> and making the default constructor private, so the only path to construction is through <code>parse</code> which we know validates.</p> 
+  <p>We also have a <code>require</code> assertion in the constructor to make sure that even internally we can't build an unvalidated <code>Volume</code>. This lets <code>businessLogic</code> be absolutely sure that <code>Volume</code> can be trusted.</p> 
+  <h2><a href="#improving-errors" id="improving-errors" class="anchor"></a>Improving Errors</h2> 
+  <p>This is getting better, but we could improve the error messaging. Right now we don't know why it failed: we just say "must be a number between 0 and 100".</p> 
+  <p>We can use <code>Either</code> instead of <code>Option</code> to improve our error messaging.</p> 
+  <div class="snippet" scala-snippet>
+   <div class="buttons"></div>
+   <pre><code class="language-scala"><span id="0" class=""><span class="tooltip-container"></span>enum Error extends Exception:
+</span><span id="1" class=""><span class="tooltip-container"></span>  case VolumeTooLow(value: Byte)
+</span><span id="2" class=""><span class="tooltip-container"></span>  case VolumeTooHigh(value: Byte)
+</span><span id="3" class=""><span class="tooltip-container"></span>  case VolumeNotANumber(value: String)
+</span><span id="4" class=""><span class="tooltip-container"></span>
+</span><span id="5" class=""><span class="tooltip-container"></span>  override def getMessage: String = this match
+</span><span id="6" class=""><span class="tooltip-container"></span>    case VolumeTooLow(value)     =&gt; s"volume too low: $value"
+</span><span id="7" class=""><span class="tooltip-container"></span>    case VolumeTooHigh(value)    =&gt; s"volume too high: $value"
+</span><span id="8" class=""><span class="tooltip-container"></span>    case VolumeNotANumber(value) =&gt; s"volume not a number: $value"
+</span><span id="9" class=""><span class="tooltip-container"></span>
+</span><span id="10" class=""><span class="tooltip-container"></span>object Volume:
+</span><span id="11" class=""><span class="tooltip-container"></span>  val MinValue = 0
+</span><span id="12" class=""><span class="tooltip-container"></span>  val MaxValue = 100
+</span><span id="13" class=""><span class="tooltip-container"></span>
+</span><span id="14" class=""><span class="tooltip-container"></span>  def parse(s: String): Either[Error, Volume] = s.toByteOption match
+</span><span id="15" class=""><span class="tooltip-container"></span>    case None =&gt; Left(Error.VolumeNotANumber(s))
+</span><span id="16" class=""><span class="tooltip-container"></span>    case Some(value) =&gt;
+</span><span id="17" class=""><span class="tooltip-container"></span>      value match
+</span><span id="18" class=""><span class="tooltip-container"></span>        case v if v &lt; MinValue =&gt; Left(Error.VolumeTooLow(v))
+</span><span id="19" class=""><span class="tooltip-container"></span>        case v if v &gt; MaxValue =&gt; Left(Error.VolumeTooHigh(v))
+</span><span id="20" class=""><span class="tooltip-container"></span>        case v                 =&gt; Right(Volume(v))
+</span><span id="21" class=""><span class="tooltip-container"></span>
+</span><span id="22" class=""><span class="tooltip-container"></span>def printError(error: Exception): Unit =
+</span><span id="23" class=""><span class="tooltip-container"></span>  println("[😞] " + red(error.getMessage))
+</span><span id="24" class=""><span class="tooltip-container"></span>
+</span><span id="25" class=""><span class="tooltip-container"></span>def program(a: String): Unit = Volume.parse(a) match
+</span><span id="26" class=""><span class="tooltip-container"></span>  case Right(volume) =&gt; businessLogic(volume)
+</span><span id="27" class=""><span class="tooltip-container"></span>  case Left(error)   =&gt; printError(error)
+</span><span id="28" class=""><span class="tooltip-container"></span>
+</span><span id="29" class=""><span class="tooltip-container"></span>// everything else stays the same
+</span><span id="30" class=""><span class="tooltip-container"></span>
+</span><span id="32" class="hideable"><span class="tooltip-container"></span>case class Volume private (value: Byte):
+</span><span id="33" class="hideable"><span class="tooltip-container"></span>  require(
+</span><span id="34" class="hideable"><span class="tooltip-container"></span>    value &gt;= Volume.MinValue &amp;&amp; value &lt;= Volume.MaxValue,
+</span><span id="35" class="hideable"><span class="tooltip-container"></span>    s"Invalid volume: ${value}"
+</span><span id="36" class="hideable"><span class="tooltip-container"></span>  )
+</span><span id="37" class="hideable"><span class="tooltip-container"></span>
+</span><span id="38" class="hideable"><span class="tooltip-container"></span>  def icon: String = value match
+</span><span id="39" class="hideable"><span class="tooltip-container"></span>    case v if v &gt;= 66 =&gt; "🔊"
+</span><span id="40" class="hideable"><span class="tooltip-container"></span>    case v if v &gt;= 33 =&gt; "🔉"
+</span><span id="41" class="hideable"><span class="tooltip-container"></span>    case v if v &gt; 0   =&gt; "🔈"
+</span><span id="42" class="hideable"><span class="tooltip-container"></span>    case v if v == 0  =&gt; "🔇"
+</span><span id="43" class="hideable"><span class="tooltip-container"></span>
+</span><span id="44" class="hideable"><span class="tooltip-container"></span>def businessLogic(volume: Volume): Unit =
+</span><span id="45" class="hideable"><span class="tooltip-container"></span>  println(s"[${volume.icon}] setting volume to ${cyan(volume.value)}")
+</span><span id="46" class="hideable"><span class="tooltip-container"></span>
+</span><span id="47" class="hideable"><span class="tooltip-container"></span>def cyan(s: Any): String =
+</span><span id="48" class="hideable"><span class="tooltip-container"></span>  Console.CYAN + s.toString + Console.RESET
+</span><span id="49" class="hideable"><span class="tooltip-container"></span>
+</span><span id="50" class="hideable"><span class="tooltip-container"></span>def red(s: Any): String =
+</span><span id="51" class="hideable"><span class="tooltip-container"></span>  Console.RED + s.toString + Console.RESET
+</span><span id="52" class="hideable"><span class="tooltip-container"></span>
+</span><span id="53" class="hideable"><span class="tooltip-container"></span>val inputs = List("0", "8", "36", "75", "101", "nope", "-10")
+</span><span id="54" class="hideable"><span class="tooltip-container"></span>inputs.foreach(program)
+</span></code></pre>
+  </div>
+  <div class="snippet"> 
+   <pre><code class="language-text">[🔇] setting volume to 0
+[🔈] setting volume to 8
+[🔉] setting volume to 36
+[🔊] setting volume to 75
+[🔊] setting volume to 100
+[😞] volume too high: 101
+[😞] volume not a number: nope
+[😞] volume too low: -10
+</code></pre> 
+  </div> 
+  <h2><a href="#using-folds" id="using-folds" class="anchor"></a>Using folds</h2> 
+  <p>Whenever we are using <code>match</code> directly, we should consider whether it's more readable to use one of standard functions that exist on containers.</p> 
+  <p>For example, when we are transform both arms of the match to the same type, like we do in <code>program</code> and <code>parse</code>, that can be represented with a with <code>fold</code> instead of an explicit match.</p> 
+  <div class="snippet" scala-snippet>
+   <div class="buttons"></div>
+   <pre><code class="language-scala"><span id="0" class=""><span class="tooltip-container"></span>object Volume:
+</span><span id="1" class=""><span class="tooltip-container"></span>  val MinValue = 0
+</span><span id="2" class=""><span class="tooltip-container"></span>  val MaxValue = 100
+</span><span id="3" class=""><span class="tooltip-container"></span>
+</span><span id="4" class=""><span class="tooltip-container"></span>  def parse(s: String): Either[Error, Volume] =
+</span><span id="5" class=""><span class="tooltip-container"></span>    s.toByteOption.fold(Left(Error.VolumeNotANumber(s))) { value =&gt;
+</span><span id="6" class=""><span class="tooltip-container"></span>      value match
+</span><span id="7" class=""><span class="tooltip-container"></span>        case v if v &lt; MinValue =&gt; Left(Error.VolumeTooLow(v))
+</span><span id="8" class=""><span class="tooltip-container"></span>        case v if v &gt; MaxValue =&gt; Left(Error.VolumeTooHigh(v))
+</span><span id="9" class=""><span class="tooltip-container"></span>        case v                 =&gt; Right(Volume(v))
+</span><span id="10" class=""><span class="tooltip-container"></span>    }
+</span><span id="11" class=""><span class="tooltip-container"></span>
+</span><span id="12" class=""><span class="tooltip-container"></span>def program(a: String): Unit =
+</span><span id="13" class=""><span class="tooltip-container"></span>  Volume.parse(a).fold(printError, businessLogic)
+</span><span id="14" class=""><span class="tooltip-container"></span>
+</span><span id="15" class=""><span class="tooltip-container"></span>// everything else stays the same
+</span><span id="16" class=""><span class="tooltip-container"></span>
+</span><span id="18" class="hideable"><span class="tooltip-container"></span>enum Error extends Exception:
+</span><span id="19" class="hideable"><span class="tooltip-container"></span>  case VolumeTooLow(value: Byte)
+</span><span id="20" class="hideable"><span class="tooltip-container"></span>  case VolumeTooHigh(value: Byte)
+</span><span id="21" class="hideable"><span class="tooltip-container"></span>  case VolumeNotANumber(value: String)
+</span><span id="22" class="hideable"><span class="tooltip-container"></span>
+</span><span id="23" class="hideable"><span class="tooltip-container"></span>  override def getMessage: String = this match
+</span><span id="24" class="hideable"><span class="tooltip-container"></span>    case VolumeTooLow(value)     =&gt; s"volume too low: $value"
+</span><span id="25" class="hideable"><span class="tooltip-container"></span>    case VolumeTooHigh(value)    =&gt; s"volume too high: $value"
+</span><span id="26" class="hideable"><span class="tooltip-container"></span>    case VolumeNotANumber(value) =&gt; s"volume not a number: $value"
+</span><span id="27" class="hideable"><span class="tooltip-container"></span>
+</span><span id="28" class="hideable"><span class="tooltip-container"></span>case class Volume private (value: Byte):
+</span><span id="29" class="hideable"><span class="tooltip-container"></span>  require(
+</span><span id="30" class="hideable"><span class="tooltip-container"></span>    value &gt;= Volume.MinValue &amp;&amp; value &lt;= Volume.MaxValue,
+</span><span id="31" class="hideable"><span class="tooltip-container"></span>    s"Invalid volume: ${value}"
+</span><span id="32" class="hideable"><span class="tooltip-container"></span>  )
+</span><span id="33" class="hideable"><span class="tooltip-container"></span>
+</span><span id="34" class="hideable"><span class="tooltip-container"></span>  def icon: String = value match
+</span><span id="35" class="hideable"><span class="tooltip-container"></span>    case v if v &gt;= 66 =&gt; "🔊"
+</span><span id="36" class="hideable"><span class="tooltip-container"></span>    case v if v &gt;= 33 =&gt; "🔉"
+</span><span id="37" class="hideable"><span class="tooltip-container"></span>    case v if v &gt; 0   =&gt; "🔈"
+</span><span id="38" class="hideable"><span class="tooltip-container"></span>    case v if v == 0  =&gt; "🔇"
+</span><span id="39" class="hideable"><span class="tooltip-container"></span>
+</span><span id="40" class="hideable"><span class="tooltip-container"></span>def businessLogic(volume: Volume): Unit =
+</span><span id="41" class="hideable"><span class="tooltip-container"></span>  println(s"[${volume.icon}] setting volume to ${cyan(volume.value)}")
+</span><span id="42" class="hideable"><span class="tooltip-container"></span>
+</span><span id="43" class="hideable"><span class="tooltip-container"></span>def printError(error: Exception): Unit =
+</span><span id="44" class="hideable"><span class="tooltip-container"></span>  println("[😞] " + red(error.getMessage))
+</span><span id="45" class="hideable"><span class="tooltip-container"></span>
+</span><span id="46" class="hideable"><span class="tooltip-container"></span>def cyan(s: Any): String =
+</span><span id="47" class="hideable"><span class="tooltip-container"></span>  Console.CYAN + s.toString + Console.RESET
+</span><span id="48" class="hideable"><span class="tooltip-container"></span>
+</span><span id="49" class="hideable"><span class="tooltip-container"></span>def red(s: Any): String =
+</span><span id="50" class="hideable"><span class="tooltip-container"></span>  Console.RED + s.toString + Console.RESET
+</span><span id="51" class="hideable"><span class="tooltip-container"></span>
+</span><span id="52" class="hideable"><span class="tooltip-container"></span>val inputs = List("0", "8", "36", "75", "101", "nope", "-10")
+</span><span id="53" class="hideable"><span class="tooltip-container"></span>inputs.foreach(program)
+</span></code></pre>
+  </div> 
+  <p>And we can reduce one more bit of boilerplate: when an anonymous function goes right into a match, we can typically remove the <code>value =&gt; match value</code> part, and just pass the match arms directly.</p> 
+  <div class="snippet" scala-snippet>
+   <div class="buttons"></div>
+   <pre><code class="language-scala"><span id="0" class=""><span class="tooltip-container"></span>object Volume:
+</span><span id="1" class=""><span class="tooltip-container"></span>  val MinValue = 0
+</span><span id="2" class=""><span class="tooltip-container"></span>  val MaxValue = 100
+</span><span id="3" class=""><span class="tooltip-container"></span>
+</span><span id="4" class=""><span class="tooltip-container"></span>  def parse(s: String): Either[Error, Volume] =
+</span><span id="5" class=""><span class="tooltip-container"></span>    s.toByteOption.fold(Left(Error.VolumeNotANumber(s))) {
+</span><span id="6" class=""><span class="tooltip-container"></span>      case v if v &lt; MinValue =&gt; Left(Error.VolumeTooLow(v))
+</span><span id="7" class=""><span class="tooltip-container"></span>      case v if v &gt; MaxValue =&gt; Left(Error.VolumeTooHigh(v))
+</span><span id="8" class=""><span class="tooltip-container"></span>      case v                 =&gt; Right(Volume(v))
+</span><span id="9" class=""><span class="tooltip-container"></span>    }
+</span><span id="10" class=""><span class="tooltip-container"></span>
+</span><span id="11" class=""><span class="tooltip-container"></span>// everything else stays the same
+</span><span id="12" class=""><span class="tooltip-container"></span>
+</span><span id="14" class="hideable"><span class="tooltip-container"></span>def program(a: String): Unit =
+</span><span id="15" class="hideable"><span class="tooltip-container"></span>  Volume.parse(a).fold(printError, businessLogic)
+</span><span id="16" class="hideable"><span class="tooltip-container"></span>
+</span><span id="17" class="hideable"><span class="tooltip-container"></span>enum Error extends Exception:
+</span><span id="18" class="hideable"><span class="tooltip-container"></span>  case VolumeTooLow(value: Byte)
+</span><span id="19" class="hideable"><span class="tooltip-container"></span>  case VolumeTooHigh(value: Byte)
+</span><span id="20" class="hideable"><span class="tooltip-container"></span>  case VolumeNotANumber(value: String)
+</span><span id="21" class="hideable"><span class="tooltip-container"></span>
+</span><span id="22" class="hideable"><span class="tooltip-container"></span>  override def getMessage: String = this match
+</span><span id="23" class="hideable"><span class="tooltip-container"></span>    case VolumeTooLow(value)     =&gt; s"volume too low: $value"
+</span><span id="24" class="hideable"><span class="tooltip-container"></span>    case VolumeTooHigh(value)    =&gt; s"volume too high: $value"
+</span><span id="25" class="hideable"><span class="tooltip-container"></span>    case VolumeNotANumber(value) =&gt; s"volume not a number: $value"
+</span><span id="26" class="hideable"><span class="tooltip-container"></span>
+</span><span id="27" class="hideable"><span class="tooltip-container"></span>case class Volume private (value: Byte):
+</span><span id="28" class="hideable"><span class="tooltip-container"></span>  require(
+</span><span id="29" class="hideable"><span class="tooltip-container"></span>    value &gt;= Volume.MinValue &amp;&amp; value &lt;= Volume.MaxValue,
+</span><span id="30" class="hideable"><span class="tooltip-container"></span>    s"Invalid volume: ${value}"
+</span><span id="31" class="hideable"><span class="tooltip-container"></span>  )
+</span><span id="32" class="hideable"><span class="tooltip-container"></span>
+</span><span id="33" class="hideable"><span class="tooltip-container"></span>  def icon: String = value match
+</span><span id="34" class="hideable"><span class="tooltip-container"></span>    case v if v &gt;= 66 =&gt; "🔊"
+</span><span id="35" class="hideable"><span class="tooltip-container"></span>    case v if v &gt;= 33 =&gt; "🔉"
+</span><span id="36" class="hideable"><span class="tooltip-container"></span>    case v if v &gt; 0   =&gt; "🔈"
+</span><span id="37" class="hideable"><span class="tooltip-container"></span>    case v if v == 0  =&gt; "🔇"
+</span><span id="38" class="hideable"><span class="tooltip-container"></span>
+</span><span id="39" class="hideable"><span class="tooltip-container"></span>def businessLogic(volume: Volume): Unit =
+</span><span id="40" class="hideable"><span class="tooltip-container"></span>  println(s"[${volume.icon}] setting volume to ${cyan(volume.value)}")
+</span><span id="41" class="hideable"><span class="tooltip-container"></span>
+</span><span id="42" class="hideable"><span class="tooltip-container"></span>def printError(error: Exception): Unit =
+</span><span id="43" class="hideable"><span class="tooltip-container"></span>  println("[😞] " + red(error.getMessage))
+</span><span id="44" class="hideable"><span class="tooltip-container"></span>
+</span><span id="45" class="hideable"><span class="tooltip-container"></span>def cyan(s: Any): String =
+</span><span id="46" class="hideable"><span class="tooltip-container"></span>  Console.CYAN + s.toString + Console.RESET
+</span><span id="47" class="hideable"><span class="tooltip-container"></span>
+</span><span id="48" class="hideable"><span class="tooltip-container"></span>def red(s: Any): String =
+</span><span id="49" class="hideable"><span class="tooltip-container"></span>  Console.RED + s.toString + Console.RESET
+</span><span id="50" class="hideable"><span class="tooltip-container"></span>
+</span><span id="51" class="hideable"><span class="tooltip-container"></span>val inputs = List("0", "8", "36", "75", "101", "nope", "-10")
+</span><span id="52" class="hideable"><span class="tooltip-container"></span>inputs.foreach(program)
+</span></code></pre>
+  </div> 
+ </body>
+</html></div></main><footer><div id="generated-by"><span class="footer-text">Generated by</span><a href="https://github.com/lampepfl/dotty/tree/master/scaladoc"><img src="images/scaladoc_logo.svg" alt="scaladoc" class="scaladoc_logo"></img><img src="images/scaladoc_logo_dark.svg" alt="scaladoc" class="scaladoc_logo_dark"></img></a></div><div class="socials"><span class="footer-text">Social links</span><a href="https://github.com/brianloveswords/scala3-examples"><span class="social-icon" data-icon-path="github-icon-black.png"></span></a><a href="https://twitter.com/brianloveswords"><span class="social-icon" data-icon-path="twitter-icon-black.png"></span></a></div><div class="mode"><span class="footer-text">Mode</span><label id="theme-toggle" class="switch"><input type="checkbox"></input><span class="slider"></span></label></div><span class="go-to-top-icon"><a href="#container"><span class="icon-vertical_align_top"></span><span class="footer-text">Back to top</span></a></span></footer></div></div></body></html>

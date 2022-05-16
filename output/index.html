@@ -1,0 +1,101 @@
+<html><head><meta charset="utf-8"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><title>index</title><link rel="shortcut icon" type="image/x-icon" href="favicon.ico"></link><script type="text/javascript" src="scripts/theme.js"></script><script type="text/javascript" src="scripts/searchData.js" defer="true"></script><script type="text/javascript" src="scripts/scastieConfiguration.js" defer="true"></script><link rel="stylesheet" href="styles/nord-light.css"></link><link rel="stylesheet" href="styles/scalastyle.css"></link><link rel="stylesheet" href="styles/colors.css"></link><link rel="stylesheet" href="styles/dotty-icons.css"></link><link rel="stylesheet" href="styles/diagram.css"></link><link rel="stylesheet" href="styles/filter-bar.css"></link><link rel="stylesheet" href="styles/code-snippets.css"></link><link rel="stylesheet" href="styles/searchbar.css"></link><link rel="stylesheet" href="styles/social-links.css"></link><link rel="stylesheet" href="styles/ux.css"></link><link rel="stylesheet" href="styles/versions-dropdown.css"></link><link rel="stylesheet" href="styles/fontawesome.css"></link><script type="text/javascript" src="hljs/highlight.pack.js" defer="true"></script><script type="text/javascript" src="scripts/hljs-scala3.js" defer="true"></script><script type="text/javascript" src="scripts/ux.js" defer="true"></script><script type="text/javascript" src="scripts/common/component.js" defer="true"></script><script type="text/javascript" src="scripts/common/utils.js" defer="true"></script><script type="text/javascript" src="scripts/components/FilterBar.js" defer="true"></script><script type="text/javascript" src="scripts/components/DocumentableList.js" defer="true"></script><script type="text/javascript" src="scripts/components/Input.js" defer="true"></script><script type="text/javascript" src="scripts/components/FilterGroup.js" defer="true"></script><script type="text/javascript" src="scripts/components/Filter.js" defer="true"></script><script type="text/javascript" src="scripts/scaladoc-scalajs.js" defer="true"></script><script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js" defer="true"></script><script type="text/javascript" src="https://d3js.org/d3.v6.min.js" defer="true"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/graphlib-dot@0.6.2/dist/graphlib-dot.min.js" defer="true"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dagre-d3/0.6.1/dagre-d3.min.js" defer="true"></script><script type="text/javascript" src="https://scastie.scala-lang.org/embedded.js" defer="true"></script><script type="text/javascript" src="scripts/data.js" defer="true"></script><script>var pathToRoot = "";</script></head><body><div id="container"><div id="leftColumn"><div id="logo"><span><div class="projectName">Scala 3 By Example</div></span><div id="version"><div class="versions-dropdown"><div onclick="dropdownHandler()" id="dropdown-button" class="dropdownbtn dropdownbtnactive"><div class="projectVersion">1.0.0</div><div id="dropdown-content" class="dropdown-content"><input type="text" placeholder="Search..." id="dropdown-input" onkeyup="filterFunction()"></input></div></div></div></div><div class="socials"><a href="https://github.com/brianloveswords/scala3-examples"><span class="social-icon" data-icon-path="github-icon-white.png"></span></a><a href="https://twitter.com/brianloveswords"><span class="social-icon" data-icon-path="twitter-icon-white.png"></span></a></div></div><div id="paneSearch"></div><nav id="sideMenu2"><div class="ni expanded"><span class="nh expanded"><span class="ar"></span><a href="docs/index.html"><span>Scala 3 By Example</span></a></span><div class="ni expanded"><span class="nh selected"><a href="index.html"><span>Welcome</span></a></span></div><div class="ni "><span class="nh "><a href="hello-world.html"><span>Hello World</span></a></span></div><div class="ni "><span class="nh "><a href="values.html"><span>Values</span></a></span></div><div class="ni "><span class="nh "><a href="variables.html"><span>Variables</span></a></span></div><div class="ni "><span class="nh "><a href="functions.html"><span>Functions</span></a></span></div><div class="ni "><span class="nh "><a href="if-else.html"><span>If/Else</span></a></span></div><div class="ni "><span class="nh "><a href="unit.html"><span>Unit</span></a></span></div><div class="ni "><span class="nh "><a href="holes.html"><span>Holes</span></a></span></div><div class="ni "><span class="nh "><a href="tuples.html"><span>Tuples</span></a></span></div><div class="ni "><span class="nh "><a href="case-classes.html"><span>Case Classes</span></a></span></div><div class="ni "><span class="nh "><a href="options.html"><span>Options</span></a></span></div><div class="ni "><span class="nh "><a href="eithers.html"><span>Eithers</span></a></span></div><div class="ni "><span class="nh "><a href="enums.html"><span>Enums</span></a></span></div><div class="ni "><span class="nh "><a href="traits.html"><span>Traits</span></a></span></div><div class="ni "><span class="nh "><a href="lists.html"><span>Lists</span></a></span></div><div class="ni "><span class="nh "><a href="smart-constructors.html"><span>Smart Constructors</span></a></span></div><div class="ni"><span class="nh "><span class="ar"></span><a href="api/index.html"><span>API</span></a></span><div class="ni"><span class="nh "><span class="ar"></span><a href="_empty_.html"><span class="micon pa"></span><span>&lt;empty&gt;</span></a></span><div class="ni "><span class="nh "><a href="_empty_/holes$.html"><span class="micon ob"></span><span>holes</span></a></span></div><div class="ni "><span class="nh "><a href="_empty_/holes_sc$.html"><span class="micon ob"></span><span>holes_sc</span></a></span></div><div class="ni "><span class="nh "><a href="_empty_/main.html"><span class="micon cl"></span><span>main</span></a></span></div><div class="ni"><span class="nh "><span class="ar"></span><a href="_empty_/values$.html"><span class="micon ob"></span><span>values</span></a></span><div class="ni"><span class="nh "><span class="ar"></span><a href="_empty_/values$$Error.html"><span class="micon en"></span><span>Error</span></a></span><div class="ni "><span class="nh "><a href="_empty_/values$$Error$$TooLow.html"><span class="micon ca"></span><span>TooLow</span></a></span></div><div class="ni "><span class="nh "><a href="_empty_/values$$Error$$TooHigh.html"><span class="micon ca"></span><span>TooHigh</span></a></span></div><div class="ni "><span class="nh "><a href="_empty_/values$$Error$$NotANumber.html"><span class="micon ca"></span><span>NotANumber</span></a></span></div></div><div class="ni "><span class="nh "><a href="_empty_/values$$Volume.html"><span class="micon cl"></span><span>Volume</span></a></span></div><div class="ni "><span class="nh "><a href="_empty_/values$$Volume$.html"><span class="micon ob"></span><span>Volume</span></a></span></div></div><div class="ni "><span class="nh "><a href="_empty_/values_sc$.html"><span class="micon ob"></span><span>values_sc</span></a></span></div></div><div class="ni"><span class="nh "><span class="ar"></span><a href="tests.html"><span class="micon pa"></span><span>tests</span></a></span><div class="ni "><span class="nh "><a href="tests/holes$.html"><span class="micon ob"></span><span>holes</span></a></span></div><div class="ni "><span class="nh "><a href="tests/holes_sc$.html"><span class="micon ob"></span><span>holes_sc</span></a></span></div><div class="ni"><span class="nh "><span class="ar"></span><a href="tests/values$.html"><span class="micon ob"></span><span>values</span></a></span><div class="ni "><span class="nh "><a href="tests/values$$Channel.html"><span class="micon cl"></span><span>Channel</span></a></span></div><div class="ni"><span class="nh "><span class="ar"></span><a href="tests/values$$Error.html"><span class="micon en"></span><span>Error</span></a></span><div class="ni "><span class="nh "><a href="tests/values$$Error$$TooLow.html"><span class="micon ca"></span><span>TooLow</span></a></span></div><div class="ni "><span class="nh "><a href="tests/values$$Error$$TooHigh.html"><span class="micon ca"></span><span>TooHigh</span></a></span></div><div class="ni "><span class="nh "><a href="tests/values$$Error$$NotANumber.html"><span class="micon ca"></span><span>NotANumber</span></a></span></div></div><div class="ni "><span class="nh "><a href="tests/values$$Volume.html"><span class="micon cl"></span><span>Volume</span></a></span></div><div class="ni "><span class="nh "><a href="tests/values$$Volume$.html"><span class="micon ob"></span><span>Volume</span></a></span></div></div><div class="ni "><span class="nh "><a href="tests/values_sc$.html"><span class="micon ob"></span><span>values_sc</span></a></span></div></div></div></div></nav></div><div id="main"><div id="leftToggler"><span class="icon-toggler"></span></div><div id="scaladoc-searchBar"></div><main id="main-content"><div class="breadcrumbs container"><a href="index.html">index</a></div><div id="content"><html>
+ <head></head>
+ <body>
+  <h1><a href="#scala-3-by-example" id="scala-3-by-example" class="anchor"></a>Scala 3 By Example</h1> 
+  <p>Hello! I'm attempting to work on an example list of snippets for introducing folks to Scala, particularly Scala 3.</p> 
+  <p>I'm riffing on <a href="https://gobyexample.com/">Go by example</a>, so you may notice a similar progression.</p> 
+  <p>Many of these examples will run in the browser, but <a href="https://scala-cli.virtuslab.org/">I recommend downloading <code>scala-cli</code></a> and running them that way:</p> 
+  <div class="snippet"> 
+   <pre><code class="language-shell">$ brew install Virtuslab/scala-cli/scala-cli
+</code></pre> 
+  </div> 
+  <ul> 
+   <li><a href="hello-world.html">Hello World</a></li> 
+   <li><a href="values.html">Values</a></li> 
+   <li><a href="variables.html">Variables</a></li> 
+   <li><a href="functions.html">Functions</a></li> 
+   <li><a href="if-else.html">If/Else</a></li> 
+   <li><a href="unit.html">Unit</a></li> 
+   <li><a href="holes.html">Holes</a></li> 
+   <li><a href="tuples.html">Tuples</a></li> 
+   <li><a href="case-classes.html">Case Classes</a></li> 
+   <li><a href="options.html">Options</a></li> 
+   <li><a href="eithers.html">Eithers</a></li> 
+   <li><a href="enums.html">Enums</a></li> 
+   <li><a href="traits.html">Traits</a></li> 
+   <li><a href="lists.html">Lists</a></li> 
+   <li><a href="smart-constructors.html">Smart Constructors</a></li> 
+   <li>Slices</li> 
+   <li>Maps</li> 
+   <li>Range</li> 
+   <li>Functions</li> 
+   <li>Multiple Return Values</li> 
+   <li>Variadic Functions</li> 
+   <li>Closures</li> 
+   <li>Recursion</li> 
+   <li>Pointers</li> 
+   <li>Strings and Runes</li> 
+   <li>Structs</li> 
+   <li>Methods</li> 
+   <li>Interfaces</li> 
+   <li>Embedding</li> 
+   <li>Generics</li> 
+   <li>Errors</li> 
+   <li>Goroutines</li> 
+   <li>Channels</li> 
+   <li>Channel Buffering</li> 
+   <li>Channel Synchronization</li> 
+   <li>Channel Directions</li> 
+   <li>Select</li> 
+   <li>Timeouts</li> 
+   <li>Non-Blocking Channel Operations</li> 
+   <li>Closing Channels</li> 
+   <li>Range over Channels</li> 
+   <li>Timers</li> 
+   <li>Tickers</li> 
+   <li>Worker Pools</li> 
+   <li>WaitGroups</li> 
+   <li>Rate Limiting</li> 
+   <li>Atomic Counters</li> 
+   <li>Mutexes</li> 
+   <li>Stateful Goroutines</li> 
+   <li>Sorting</li> 
+   <li>Sorting by Functions</li> 
+   <li>Panic</li> 
+   <li>Defer</li> 
+   <li>Recover</li> 
+   <li>String Functions</li> 
+   <li>String Formatting</li> 
+   <li>Text Templates</li> 
+   <li>Regular Expressions</li> 
+   <li>JSON</li> 
+   <li>XML</li> 
+   <li>Time</li> 
+   <li>Epoch</li> 
+   <li>Time Formatting / Parsing</li> 
+   <li>Random Numbers</li> 
+   <li>Number Parsing</li> 
+   <li>URL Parsing</li> 
+   <li>SHA256 Hashes</li> 
+   <li>Base64 Encoding</li> 
+   <li>Reading Files</li> 
+   <li>Writing Files</li> 
+   <li>Line Filters</li> 
+   <li>File Paths</li> 
+   <li>Directories</li> 
+   <li>Temporary Files and Directories</li> 
+   <li>Testing and Benchmarking</li> 
+   <li>Command-Line Arguments</li> 
+   <li>Command-Line Flags</li> 
+   <li>Command-Line Subcommands</li> 
+   <li>Environment Variables</li> 
+   <li>HTTP Clients</li> 
+   <li>HTTP Servers</li> 
+   <li>Context</li> 
+   <li>Spawning Processes</li> 
+   <li>Exec'ing Processes</li> 
+   <li>Signals</li> 
+   <li>Exit</li> 
+  </ul> 
+ </body>
+</html></div></main><footer><div id="generated-by"><span class="footer-text">Generated by</span><a href="https://github.com/lampepfl/dotty/tree/master/scaladoc"><img src="images/scaladoc_logo.svg" alt="scaladoc" class="scaladoc_logo"></img><img src="images/scaladoc_logo_dark.svg" alt="scaladoc" class="scaladoc_logo_dark"></img></a></div><div class="socials"><span class="footer-text">Social links</span><a href="https://github.com/brianloveswords/scala3-examples"><span class="social-icon" data-icon-path="github-icon-black.png"></span></a><a href="https://twitter.com/brianloveswords"><span class="social-icon" data-icon-path="twitter-icon-black.png"></span></a></div><div class="mode"><span class="footer-text">Mode</span><label id="theme-toggle" class="switch"><input type="checkbox"></input><span class="slider"></span></label></div><span class="go-to-top-icon"><a href="#container"><span class="icon-vertical_align_top"></span><span class="footer-text">Back to top</span></a></span></footer></div></div></body></html>

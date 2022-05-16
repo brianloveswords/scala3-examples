@@ -1,0 +1,114 @@
+<html><head><meta charset="utf-8"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><title>Lists</title><link rel="shortcut icon" type="image/x-icon" href="favicon.ico"></link><script type="text/javascript" src="scripts/theme.js"></script><script type="text/javascript" src="scripts/searchData.js" defer="true"></script><script type="text/javascript" src="scripts/scastieConfiguration.js" defer="true"></script><link rel="stylesheet" href="styles/nord-light.css"></link><link rel="stylesheet" href="styles/scalastyle.css"></link><link rel="stylesheet" href="styles/colors.css"></link><link rel="stylesheet" href="styles/dotty-icons.css"></link><link rel="stylesheet" href="styles/diagram.css"></link><link rel="stylesheet" href="styles/filter-bar.css"></link><link rel="stylesheet" href="styles/code-snippets.css"></link><link rel="stylesheet" href="styles/searchbar.css"></link><link rel="stylesheet" href="styles/social-links.css"></link><link rel="stylesheet" href="styles/ux.css"></link><link rel="stylesheet" href="styles/versions-dropdown.css"></link><link rel="stylesheet" href="styles/fontawesome.css"></link><script type="text/javascript" src="hljs/highlight.pack.js" defer="true"></script><script type="text/javascript" src="scripts/hljs-scala3.js" defer="true"></script><script type="text/javascript" src="scripts/ux.js" defer="true"></script><script type="text/javascript" src="scripts/common/component.js" defer="true"></script><script type="text/javascript" src="scripts/common/utils.js" defer="true"></script><script type="text/javascript" src="scripts/components/FilterBar.js" defer="true"></script><script type="text/javascript" src="scripts/components/DocumentableList.js" defer="true"></script><script type="text/javascript" src="scripts/components/Input.js" defer="true"></script><script type="text/javascript" src="scripts/components/FilterGroup.js" defer="true"></script><script type="text/javascript" src="scripts/components/Filter.js" defer="true"></script><script type="text/javascript" src="scripts/scaladoc-scalajs.js" defer="true"></script><script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js" defer="true"></script><script type="text/javascript" src="https://d3js.org/d3.v6.min.js" defer="true"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/graphlib-dot@0.6.2/dist/graphlib-dot.min.js" defer="true"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dagre-d3/0.6.1/dagre-d3.min.js" defer="true"></script><script type="text/javascript" src="https://scastie.scala-lang.org/embedded.js" defer="true"></script><script type="text/javascript" src="scripts/data.js" defer="true"></script><script>var pathToRoot = "";</script></head><body><div id="container"><div id="leftColumn"><div id="logo"><span><div class="projectName">Scala 3 By Example</div></span><div id="version"><div class="versions-dropdown"><div onclick="dropdownHandler()" id="dropdown-button" class="dropdownbtn dropdownbtnactive"><div class="projectVersion">1.0.0</div><div id="dropdown-content" class="dropdown-content"><input type="text" placeholder="Search..." id="dropdown-input" onkeyup="filterFunction()"></input></div></div></div></div><div class="socials"><a href="https://github.com/brianloveswords/scala3-examples"><span class="social-icon" data-icon-path="github-icon-white.png"></span></a><a href="https://twitter.com/brianloveswords"><span class="social-icon" data-icon-path="twitter-icon-white.png"></span></a></div></div><div id="paneSearch"></div><nav id="sideMenu2"><div class="ni expanded"><span class="nh expanded"><span class="ar"></span><a href="docs/index.html"><span>Scala 3 By Example</span></a></span><div class="ni "><span class="nh "><a href="index.html"><span>Welcome</span></a></span></div><div class="ni "><span class="nh "><a href="hello-world.html"><span>Hello World</span></a></span></div><div class="ni "><span class="nh "><a href="values.html"><span>Values</span></a></span></div><div class="ni "><span class="nh "><a href="variables.html"><span>Variables</span></a></span></div><div class="ni "><span class="nh "><a href="functions.html"><span>Functions</span></a></span></div><div class="ni "><span class="nh "><a href="if-else.html"><span>If/Else</span></a></span></div><div class="ni "><span class="nh "><a href="unit.html"><span>Unit</span></a></span></div><div class="ni "><span class="nh "><a href="holes.html"><span>Holes</span></a></span></div><div class="ni "><span class="nh "><a href="tuples.html"><span>Tuples</span></a></span></div><div class="ni "><span class="nh "><a href="case-classes.html"><span>Case Classes</span></a></span></div><div class="ni "><span class="nh "><a href="options.html"><span>Options</span></a></span></div><div class="ni "><span class="nh "><a href="eithers.html"><span>Eithers</span></a></span></div><div class="ni "><span class="nh "><a href="enums.html"><span>Enums</span></a></span></div><div class="ni "><span class="nh "><a href="traits.html"><span>Traits</span></a></span></div><div class="ni expanded"><span class="nh selected"><a href="lists.html"><span>Lists</span></a></span></div><div class="ni "><span class="nh "><a href="smart-constructors.html"><span>Smart Constructors</span></a></span></div><div class="ni"><span class="nh "><span class="ar"></span><a href="api/index.html"><span>API</span></a></span><div class="ni"><span class="nh "><span class="ar"></span><a href="_empty_.html"><span class="micon pa"></span><span>&lt;empty&gt;</span></a></span><div class="ni "><span class="nh "><a href="_empty_/holes$.html"><span class="micon ob"></span><span>holes</span></a></span></div><div class="ni "><span class="nh "><a href="_empty_/holes_sc$.html"><span class="micon ob"></span><span>holes_sc</span></a></span></div><div class="ni "><span class="nh "><a href="_empty_/main.html"><span class="micon cl"></span><span>main</span></a></span></div><div class="ni"><span class="nh "><span class="ar"></span><a href="_empty_/values$.html"><span class="micon ob"></span><span>values</span></a></span><div class="ni"><span class="nh "><span class="ar"></span><a href="_empty_/values$$Error.html"><span class="micon en"></span><span>Error</span></a></span><div class="ni "><span class="nh "><a href="_empty_/values$$Error$$TooLow.html"><span class="micon ca"></span><span>TooLow</span></a></span></div><div class="ni "><span class="nh "><a href="_empty_/values$$Error$$TooHigh.html"><span class="micon ca"></span><span>TooHigh</span></a></span></div><div class="ni "><span class="nh "><a href="_empty_/values$$Error$$NotANumber.html"><span class="micon ca"></span><span>NotANumber</span></a></span></div></div><div class="ni "><span class="nh "><a href="_empty_/values$$Volume.html"><span class="micon cl"></span><span>Volume</span></a></span></div><div class="ni "><span class="nh "><a href="_empty_/values$$Volume$.html"><span class="micon ob"></span><span>Volume</span></a></span></div></div><div class="ni "><span class="nh "><a href="_empty_/values_sc$.html"><span class="micon ob"></span><span>values_sc</span></a></span></div></div><div class="ni"><span class="nh "><span class="ar"></span><a href="tests.html"><span class="micon pa"></span><span>tests</span></a></span><div class="ni "><span class="nh "><a href="tests/holes$.html"><span class="micon ob"></span><span>holes</span></a></span></div><div class="ni "><span class="nh "><a href="tests/holes_sc$.html"><span class="micon ob"></span><span>holes_sc</span></a></span></div><div class="ni"><span class="nh "><span class="ar"></span><a href="tests/values$.html"><span class="micon ob"></span><span>values</span></a></span><div class="ni "><span class="nh "><a href="tests/values$$Channel.html"><span class="micon cl"></span><span>Channel</span></a></span></div><div class="ni"><span class="nh "><span class="ar"></span><a href="tests/values$$Error.html"><span class="micon en"></span><span>Error</span></a></span><div class="ni "><span class="nh "><a href="tests/values$$Error$$TooLow.html"><span class="micon ca"></span><span>TooLow</span></a></span></div><div class="ni "><span class="nh "><a href="tests/values$$Error$$TooHigh.html"><span class="micon ca"></span><span>TooHigh</span></a></span></div><div class="ni "><span class="nh "><a href="tests/values$$Error$$NotANumber.html"><span class="micon ca"></span><span>NotANumber</span></a></span></div></div><div class="ni "><span class="nh "><a href="tests/values$$Volume.html"><span class="micon cl"></span><span>Volume</span></a></span></div><div class="ni "><span class="nh "><a href="tests/values$$Volume$.html"><span class="micon ob"></span><span>Volume</span></a></span></div></div><div class="ni "><span class="nh "><a href="tests/values_sc$.html"><span class="micon ob"></span><span>values_sc</span></a></span></div></div></div></div></nav></div><div id="main"><div id="leftToggler"><span class="icon-toggler"></span></div><div id="scaladoc-searchBar"></div><main id="main-content"><div class="breadcrumbs container"><a href="docs/index.html">Scala 3 By Example</a>/<a href="lists.html">Lists</a></div><div id="content"><html>
+ <head></head>
+ <body>
+  <h1><a href="#lists" id="lists" class="anchor"></a>Lists</h1> 
+  <p>There is a rich set of collections in the Scala standard library, both immutable and mutable. <code>List</code>, representing a linked list, is the the most common one.</p> 
+  <div class="snippet" scala-snippet>
+   <div class="buttons"></div>
+   <pre><code class="language-scala"><span id="0" class=""><span class="tooltip-container"></span>val xs = List(1, 2, 3, 2, 1)
+</span><span id="1" class=""><span class="tooltip-container"></span>
+</span><span id="2" class=""><span class="tooltip-container"></span>// Sums all the elements in the list
+</span><span id="3" class=""><span class="tooltip-container"></span>val sum = xs.foldLeft(0)((acc, x) =&gt; acc + x)
+</span><span id="4" class=""><span class="tooltip-container"></span>println(s"sum: ${sum}")
+</span><span id="5" class=""><span class="tooltip-container"></span>
+</span><span id="6" class=""><span class="tooltip-container"></span>// Above can be shortened to this
+</span><span id="7" class=""><span class="tooltip-container"></span>val sum2 = xs.foldLeft(0)(_ + _)
+</span><span id="8" class=""><span class="tooltip-container"></span>println(s"sums equal? ${sum == sum2}")
+</span><span id="9" class=""><span class="tooltip-container"></span>
+</span><span id="10" class=""><span class="tooltip-container"></span>// Returns a new list with all elements doubled.
+</span><span id="11" class=""><span class="tooltip-container"></span>// Lists are immutable, so for every function
+</span><span id="12" class=""><span class="tooltip-container"></span>// below, a new list is *always* returned
+</span><span id="13" class=""><span class="tooltip-container"></span>val doubled = xs.map(_ * 2)
+</span><span id="14" class=""><span class="tooltip-container"></span>println(s"xs: ${xs}")
+</span><span id="15" class=""><span class="tooltip-container"></span>println(s"doubled: ${doubled}")
+</span><span id="16" class=""><span class="tooltip-container"></span>
+</span><span id="17" class=""><span class="tooltip-container"></span>// Filter out all odd numbers
+</span><span id="18" class=""><span class="tooltip-container"></span>val evens = xs.filter(_ % 2 == 0)
+</span><span id="19" class=""><span class="tooltip-container"></span>println(s"evens: ${evens}")
+</span><span id="20" class=""><span class="tooltip-container"></span>
+</span><span id="21" class=""><span class="tooltip-container"></span>// Return a new list with 0 as the new head,
+</span><span id="22" class=""><span class="tooltip-container"></span>// and the original list as the tail. The speed
+</span><span id="23" class=""><span class="tooltip-container"></span>// of this operation is constant, does not change
+</span><span id="24" class=""><span class="tooltip-container"></span>// based on the size of the list
+</span><span id="25" class=""><span class="tooltip-container"></span>val zeroThenXs = 0 +: xs
+</span><span id="26" class=""><span class="tooltip-container"></span>println(s"zeroThenXs: ${zeroThenXs}")
+</span><span id="27" class=""><span class="tooltip-container"></span>
+</span><span id="28" class=""><span class="tooltip-container"></span>// Return a new list with the element to the end of
+</span><span id="29" class=""><span class="tooltip-container"></span>// the list. Adding to the front is faster because
+</span><span id="30" class=""><span class="tooltip-container"></span>// the computer has to walk through the entire list
+</span><span id="31" class=""><span class="tooltip-container"></span>// to add to the back
+</span><span id="32" class=""><span class="tooltip-container"></span>val xsThenFour = xs :+ 4
+</span><span id="33" class=""><span class="tooltip-container"></span>println(s"xsThenFour: ${xsThenFour}")
+</span><span id="34" class=""><span class="tooltip-container"></span>
+</span><span id="35" class=""><span class="tooltip-container"></span>// Returns a new list that is the two lists smashed
+</span><span id="36" class=""><span class="tooltip-container"></span>// together. This has to walk the first list to find
+</span><span id="37" class=""><span class="tooltip-container"></span>// the end to attach the second list to
+</span><span id="38" class=""><span class="tooltip-container"></span>val xsAndYs = xs ++ List(4, 5, 6)
+</span><span id="39" class=""><span class="tooltip-container"></span>
+</span><span id="40" class=""><span class="tooltip-container"></span>// Returns two new lists in a tuple, with the first
+</span><span id="41" class=""><span class="tooltip-container"></span>// member of the tuple being a list that contains
+</span><span id="42" class=""><span class="tooltip-container"></span>// the elements that evaluated true for the predicate
+</span><span id="43" class=""><span class="tooltip-container"></span>// and the second list containing the rest
+</span><span id="44" class=""><span class="tooltip-container"></span>val (evens2, odds) = xs.partition(_ % 2 == 0)
+</span><span id="45" class=""><span class="tooltip-container"></span>println(s"evens equal? ${evens == evens2}")
+</span><span id="46" class=""><span class="tooltip-container"></span>println(s"odds: ${odds}")
+</span><span id="47" class=""><span class="tooltip-container"></span>
+</span><span id="48" class=""><span class="tooltip-container"></span>// Returns true if the list has an even number
+</span><span id="49" class=""><span class="tooltip-container"></span>val hasAnEven = xs.exists(_ % 2 == 0)
+</span><span id="50" class=""><span class="tooltip-container"></span>println(s"hasAnEven: ${hasAnEven}")
+</span><span id="51" class=""><span class="tooltip-container"></span>
+</span><span id="52" class=""><span class="tooltip-container"></span>// Return true if all elements are less than 10
+</span><span id="53" class=""><span class="tooltip-container"></span>val allSingleDigit = xs.forall(_ &lt; 10)
+</span><span id="54" class=""><span class="tooltip-container"></span>println(s"allSingleDigit? ${allSingleDigit}")
+</span><span id="55" class=""><span class="tooltip-container"></span>
+</span><span id="56" class=""><span class="tooltip-container"></span>// Take n elements from the front of the list
+</span><span id="57" class=""><span class="tooltip-container"></span>val firstTwo = xs.take(2)
+</span><span id="58" class=""><span class="tooltip-container"></span>println(s"firstTwo: ${firstTwo}")
+</span><span id="59" class=""><span class="tooltip-container"></span>
+</span><span id="60" class=""><span class="tooltip-container"></span>// Drop the first n elements from the list
+</span><span id="61" class=""><span class="tooltip-container"></span>// and return the rest.
+</span><span id="62" class=""><span class="tooltip-container"></span>val rest = xs.drop(2)
+</span><span id="63" class=""><span class="tooltip-container"></span>println(s"rest: ${rest}")
+</span><span id="64" class=""><span class="tooltip-container"></span>
+</span><span id="65" class=""><span class="tooltip-container"></span>// Take elements while a predicate matches
+</span><span id="66" class=""><span class="tooltip-container"></span>// and stop when it finds the first element
+</span><span id="67" class=""><span class="tooltip-container"></span>// that doesn't match
+</span><span id="68" class=""><span class="tooltip-container"></span>val lt3 = xs.takeWhile(_ &lt; 3)
+</span><span id="69" class=""><span class="tooltip-container"></span>println(s"lt3: ${lt3}")
+</span><span id="70" class=""><span class="tooltip-container"></span>
+</span><span id="71" class=""><span class="tooltip-container"></span>// drop elements while a predicate matches
+</span><span id="72" class=""><span class="tooltip-container"></span>// and stop when it finds the first element
+</span><span id="73" class=""><span class="tooltip-container"></span>// that doesn't match, or end of list
+</span><span id="74" class=""><span class="tooltip-container"></span>val gt3 = xs.dropWhile(_ &lt; 3)
+</span><span id="75" class=""><span class="tooltip-container"></span>println(s"gt3: ${gt3}")
+</span></code></pre>
+  </div> 
+  <h2><a href="#traits" id="traits" class="anchor"></a>Traits</h2> 
+  <div class="snippet" scala-snippet>
+   <div class="buttons"></div>
+   <pre><code class="language-scala"><span id="0" class=""><span class="tooltip-container"></span>// Traits: as of Scala 3.1.2, the default
+</span><span id="1" class=""><span class="tooltip-container"></span>// concrete implementation for these traits
+</span><span id="2" class=""><span class="tooltip-container"></span>// is a `List`.
+</span><span id="3" class=""><span class="tooltip-container"></span>val b = Seq(1, 2, 3)
+</span><span id="4" class=""><span class="tooltip-container"></span>val c = Iterable(1, 2, 3)
+</span></code></pre>
+  </div> 
+  <p>Here is the <a href="https://docs.scala-lang.org/overviews/collections-2.13/overview.html">hierarchy of collections</a>:</p> 
+  <img src="https://docs.scala-lang.org/resources/images/tour/collections-immutable-diagram-213.svg" width="100%"> 
+  <ul> 
+   <li>Blue boxes represent <code>traits</code> (interfaces).</li> 
+   <li>Black boxes represent concrete implementations.</li> 
+   <li>Thick arrows represent default implementations.</li> 
+   <li>Thin arrows represent other implementations.</li> 
+   <li>Dotted arrows represent implementation by implicit conversion.</li> 
+  </ul> 
+  <p>The top of the collection hierarchy is the <code>Iterable</code>, and <code>List</code> is the default concrete implementation.</p> 
+  <div class="snippet" scala-snippet>
+   <div class="buttons"></div>
+   <pre><code class="language-scala"><span id="0" class=""><span class="tooltip-container"></span>val xs = Iterable(1, 2, 3)
+</span><span id="1" class=""><span class="tooltip-container"></span>println(xs) // List(1, 2, 3)
+</span></code></pre>
+  </div> 
+  <h2><a href="#what-is-a-list" id="what-is-a-list" class="anchor"></a>What is a List</h2> 
+ </body>
+</html></div></main><footer><div id="generated-by"><span class="footer-text">Generated by</span><a href="https://github.com/lampepfl/dotty/tree/master/scaladoc"><img src="images/scaladoc_logo.svg" alt="scaladoc" class="scaladoc_logo"></img><img src="images/scaladoc_logo_dark.svg" alt="scaladoc" class="scaladoc_logo_dark"></img></a></div><div class="socials"><span class="footer-text">Social links</span><a href="https://github.com/brianloveswords/scala3-examples"><span class="social-icon" data-icon-path="github-icon-black.png"></span></a><a href="https://twitter.com/brianloveswords"><span class="social-icon" data-icon-path="twitter-icon-black.png"></span></a></div><div class="mode"><span class="footer-text">Mode</span><label id="theme-toggle" class="switch"><input type="checkbox"></input><span class="slider"></span></label></div><span class="go-to-top-icon"><a href="#container"><span class="icon-vertical_align_top"></span><span class="footer-text">Back to top</span></a></span></footer></div></div></body></html>

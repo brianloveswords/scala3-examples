@@ -1,0 +1,111 @@
+<html><head><meta charset="utf-8"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><title>Case Classes</title><link rel="shortcut icon" type="image/x-icon" href="favicon.ico"></link><script type="text/javascript" src="scripts/theme.js"></script><script type="text/javascript" src="scripts/searchData.js" defer="true"></script><script type="text/javascript" src="scripts/scastieConfiguration.js" defer="true"></script><link rel="stylesheet" href="styles/nord-light.css"></link><link rel="stylesheet" href="styles/scalastyle.css"></link><link rel="stylesheet" href="styles/colors.css"></link><link rel="stylesheet" href="styles/dotty-icons.css"></link><link rel="stylesheet" href="styles/diagram.css"></link><link rel="stylesheet" href="styles/filter-bar.css"></link><link rel="stylesheet" href="styles/code-snippets.css"></link><link rel="stylesheet" href="styles/searchbar.css"></link><link rel="stylesheet" href="styles/social-links.css"></link><link rel="stylesheet" href="styles/ux.css"></link><link rel="stylesheet" href="styles/versions-dropdown.css"></link><link rel="stylesheet" href="styles/fontawesome.css"></link><script type="text/javascript" src="hljs/highlight.pack.js" defer="true"></script><script type="text/javascript" src="scripts/hljs-scala3.js" defer="true"></script><script type="text/javascript" src="scripts/ux.js" defer="true"></script><script type="text/javascript" src="scripts/common/component.js" defer="true"></script><script type="text/javascript" src="scripts/common/utils.js" defer="true"></script><script type="text/javascript" src="scripts/components/FilterBar.js" defer="true"></script><script type="text/javascript" src="scripts/components/DocumentableList.js" defer="true"></script><script type="text/javascript" src="scripts/components/Input.js" defer="true"></script><script type="text/javascript" src="scripts/components/FilterGroup.js" defer="true"></script><script type="text/javascript" src="scripts/components/Filter.js" defer="true"></script><script type="text/javascript" src="scripts/scaladoc-scalajs.js" defer="true"></script><script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js" defer="true"></script><script type="text/javascript" src="https://d3js.org/d3.v6.min.js" defer="true"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/graphlib-dot@0.6.2/dist/graphlib-dot.min.js" defer="true"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dagre-d3/0.6.1/dagre-d3.min.js" defer="true"></script><script type="text/javascript" src="https://scastie.scala-lang.org/embedded.js" defer="true"></script><script type="text/javascript" src="scripts/data.js" defer="true"></script><script>var pathToRoot = "";</script></head><body><div id="container"><div id="leftColumn"><div id="logo"><span><div class="projectName">Scala 3 By Example</div></span><div id="version"><div class="versions-dropdown"><div onclick="dropdownHandler()" id="dropdown-button" class="dropdownbtn dropdownbtnactive"><div class="projectVersion">1.0.0</div><div id="dropdown-content" class="dropdown-content"><input type="text" placeholder="Search..." id="dropdown-input" onkeyup="filterFunction()"></input></div></div></div></div><div class="socials"><a href="https://github.com/brianloveswords/scala3-examples"><span class="social-icon" data-icon-path="github-icon-white.png"></span></a><a href="https://twitter.com/brianloveswords"><span class="social-icon" data-icon-path="twitter-icon-white.png"></span></a></div></div><div id="paneSearch"></div><nav id="sideMenu2"><div class="ni expanded"><span class="nh expanded"><span class="ar"></span><a href="docs/index.html"><span>Scala 3 By Example</span></a></span><div class="ni "><span class="nh "><a href="index.html"><span>Welcome</span></a></span></div><div class="ni "><span class="nh "><a href="hello-world.html"><span>Hello World</span></a></span></div><div class="ni "><span class="nh "><a href="values.html"><span>Values</span></a></span></div><div class="ni "><span class="nh "><a href="variables.html"><span>Variables</span></a></span></div><div class="ni "><span class="nh "><a href="functions.html"><span>Functions</span></a></span></div><div class="ni "><span class="nh "><a href="if-else.html"><span>If/Else</span></a></span></div><div class="ni "><span class="nh "><a href="unit.html"><span>Unit</span></a></span></div><div class="ni "><span class="nh "><a href="holes.html"><span>Holes</span></a></span></div><div class="ni "><span class="nh "><a href="tuples.html"><span>Tuples</span></a></span></div><div class="ni expanded"><span class="nh selected"><a href="case-classes.html"><span>Case Classes</span></a></span></div><div class="ni "><span class="nh "><a href="options.html"><span>Options</span></a></span></div><div class="ni "><span class="nh "><a href="eithers.html"><span>Eithers</span></a></span></div><div class="ni "><span class="nh "><a href="enums.html"><span>Enums</span></a></span></div><div class="ni "><span class="nh "><a href="traits.html"><span>Traits</span></a></span></div><div class="ni "><span class="nh "><a href="lists.html"><span>Lists</span></a></span></div><div class="ni "><span class="nh "><a href="smart-constructors.html"><span>Smart Constructors</span></a></span></div><div class="ni"><span class="nh "><span class="ar"></span><a href="api/index.html"><span>API</span></a></span><div class="ni"><span class="nh "><span class="ar"></span><a href="_empty_.html"><span class="micon pa"></span><span>&lt;empty&gt;</span></a></span><div class="ni "><span class="nh "><a href="_empty_/holes$.html"><span class="micon ob"></span><span>holes</span></a></span></div><div class="ni "><span class="nh "><a href="_empty_/holes_sc$.html"><span class="micon ob"></span><span>holes_sc</span></a></span></div><div class="ni "><span class="nh "><a href="_empty_/main.html"><span class="micon cl"></span><span>main</span></a></span></div><div class="ni"><span class="nh "><span class="ar"></span><a href="_empty_/values$.html"><span class="micon ob"></span><span>values</span></a></span><div class="ni"><span class="nh "><span class="ar"></span><a href="_empty_/values$$Error.html"><span class="micon en"></span><span>Error</span></a></span><div class="ni "><span class="nh "><a href="_empty_/values$$Error$$TooLow.html"><span class="micon ca"></span><span>TooLow</span></a></span></div><div class="ni "><span class="nh "><a href="_empty_/values$$Error$$TooHigh.html"><span class="micon ca"></span><span>TooHigh</span></a></span></div><div class="ni "><span class="nh "><a href="_empty_/values$$Error$$NotANumber.html"><span class="micon ca"></span><span>NotANumber</span></a></span></div></div><div class="ni "><span class="nh "><a href="_empty_/values$$Volume.html"><span class="micon cl"></span><span>Volume</span></a></span></div><div class="ni "><span class="nh "><a href="_empty_/values$$Volume$.html"><span class="micon ob"></span><span>Volume</span></a></span></div></div><div class="ni "><span class="nh "><a href="_empty_/values_sc$.html"><span class="micon ob"></span><span>values_sc</span></a></span></div></div><div class="ni"><span class="nh "><span class="ar"></span><a href="tests.html"><span class="micon pa"></span><span>tests</span></a></span><div class="ni "><span class="nh "><a href="tests/holes$.html"><span class="micon ob"></span><span>holes</span></a></span></div><div class="ni "><span class="nh "><a href="tests/holes_sc$.html"><span class="micon ob"></span><span>holes_sc</span></a></span></div><div class="ni"><span class="nh "><span class="ar"></span><a href="tests/values$.html"><span class="micon ob"></span><span>values</span></a></span><div class="ni "><span class="nh "><a href="tests/values$$Channel.html"><span class="micon cl"></span><span>Channel</span></a></span></div><div class="ni"><span class="nh "><span class="ar"></span><a href="tests/values$$Error.html"><span class="micon en"></span><span>Error</span></a></span><div class="ni "><span class="nh "><a href="tests/values$$Error$$TooLow.html"><span class="micon ca"></span><span>TooLow</span></a></span></div><div class="ni "><span class="nh "><a href="tests/values$$Error$$TooHigh.html"><span class="micon ca"></span><span>TooHigh</span></a></span></div><div class="ni "><span class="nh "><a href="tests/values$$Error$$NotANumber.html"><span class="micon ca"></span><span>NotANumber</span></a></span></div></div><div class="ni "><span class="nh "><a href="tests/values$$Volume.html"><span class="micon cl"></span><span>Volume</span></a></span></div><div class="ni "><span class="nh "><a href="tests/values$$Volume$.html"><span class="micon ob"></span><span>Volume</span></a></span></div></div><div class="ni "><span class="nh "><a href="tests/values_sc$.html"><span class="micon ob"></span><span>values_sc</span></a></span></div></div></div></div></nav></div><div id="main"><div id="leftToggler"><span class="icon-toggler"></span></div><div id="scaladoc-searchBar"></div><main id="main-content"><div class="breadcrumbs container"><a href="docs/index.html">Scala 3 By Example</a>/<a href="case-classes.html">Case Classes</a></div><div id="content"><html>
+ <head></head>
+ <body>
+  <h1><a href="#case-classes" id="case-classes" class="anchor"></a>Case Classes</h1> 
+  <p>Case classes are named bags of data. They are very similar to structs in Go, and dataclasses in Python.</p> 
+  <div class="snippet" scala-snippet>
+   <div class="buttons"></div>
+   <pre><code class="language-scala"><span id="0" class=""><span class="tooltip-container"></span>// import everything from the `duration` namespace,
+</span><span id="1" class=""><span class="tooltip-container"></span>// including the `FiniteDuration` type and the methods
+</span><span id="2" class=""><span class="tooltip-container"></span>// that get attached to numbers that allow us to do e.g.
+</span><span id="3" class=""><span class="tooltip-container"></span>// `1.second`
+</span><span id="4" class=""><span class="tooltip-container"></span>import scala.concurrent.duration.*
+</span><span id="5" class=""><span class="tooltip-container"></span>
+</span><span id="6" class=""><span class="tooltip-container"></span>case class Sample(
+</span><span id="7" class=""><span class="tooltip-container"></span>  name: String,
+</span><span id="8" class=""><span class="tooltip-container"></span>  duration: FiniteDuration,
+</span><span id="9" class=""><span class="tooltip-container"></span>  sampleRate: Int,
+</span><span id="10" class=""><span class="tooltip-container"></span>  bitDepth: Int,
+</span><span id="11" class=""><span class="tooltip-container"></span>  channels: Int,
+</span><span id="12" class=""><span class="tooltip-container"></span>):
+</span><span id="13" class=""><span class="tooltip-container"></span>  /** Returns the size of the sample in bytes */
+</span><span id="14" class=""><span class="tooltip-container"></span>  lazy val sizeBytes: Long =
+</span><span id="15" class=""><span class="tooltip-container"></span>    (duration.toMillis
+</span><span id="16" class=""><span class="tooltip-container"></span>      * sampleRate / 1000.0 / 8
+</span><span id="17" class=""><span class="tooltip-container"></span>      * bitDepth
+</span><span id="18" class=""><span class="tooltip-container"></span>      * channels
+</span><span id="19" class=""><span class="tooltip-container"></span>    ).toLong
+</span><span id="20" class=""><span class="tooltip-container"></span>
+</span><span id="21" class=""><span class="tooltip-container"></span>val kick = Sample("kick", 780.milliseconds, 44100, 16, 2)
+</span><span id="22" class=""><span class="tooltip-container"></span>println(kick.sizeBytes)
+</span></code></pre>
+  </div> 
+  <p>Case class members should largely represent data that is derivable from the input parameters. For example, you should not have a <code>saveToDisk</code> method on a case class because the case class itself should not be responsible for <em>how</em> to communicate with the outside world—that is the responsibility of a service that uses the case class.</p> 
+  <p>In the language of <a href="https://www.manning.com/books/grokking-simplicity">Grokking Simplicity</a>, you should only use data and calculations in case classes, and never actions.</p> 
+  <p>When there's more than a few parameters it's useful to name them when you're instantiating the case class.</p> 
+  <div class="snippet" scala-snippet>
+   <div class="buttons"></div>
+   <pre><code class="language-scala"><span id="1" class="hideable"><span class="tooltip-container"></span>import scala.concurrent.duration.*
+</span><span id="2" class="hideable"><span class="tooltip-container"></span>case class Sample(
+</span><span id="3" class="hideable"><span class="tooltip-container"></span>  name: String,
+</span><span id="4" class="hideable"><span class="tooltip-container"></span>  duration: FiniteDuration,
+</span><span id="5" class="hideable"><span class="tooltip-container"></span>  sampleRate: Int,
+</span><span id="6" class="hideable"><span class="tooltip-container"></span>  bitDepth: Int,
+</span><span id="7" class="hideable"><span class="tooltip-container"></span>  channels: Int,
+</span><span id="8" class="hideable"><span class="tooltip-container"></span>)
+</span><span id="10" class=""><span class="tooltip-container"></span>
+</span><span id="11" class=""><span class="tooltip-container"></span>val hat = Sample(
+</span><span id="12" class=""><span class="tooltip-container"></span>  channels = 2,
+</span><span id="13" class=""><span class="tooltip-container"></span>  sampleRate = 44100,
+</span><span id="14" class=""><span class="tooltip-container"></span>  duration = 450.milliseconds,
+</span><span id="15" class=""><span class="tooltip-container"></span>  bitDepth = 16,
+</span><span id="16" class=""><span class="tooltip-container"></span>  name = "hat",
+</span><span id="17" class=""><span class="tooltip-container"></span>)
+</span></code></pre>
+  </div> 
+  <p>This allows you to refactor the ordering in the case class later without breaking the code</p> 
+  <p>For example, if we decided to swap the order of <code>bitDepth</code> and <code>sampleRate</code> in the case class, the <code>kick</code> sample would be broken because the it would be interpreted as having a sampleRate of 16 and a bit depth of 44,100 bits</p> 
+  <h2><a href="#immutability" id="immutability" class="anchor"></a>Immutability</h2> 
+  <p>Case classes parameters get exposed as members, and are immutable by default.</p> 
+  <div class="snippet" scala-snippet>
+   <div class="buttons"></div>
+   <pre><code class="language-scala"><span id="0" class=""><span class="tooltip-container"></span>case class Person(name: String, age: Int)
+</span><span id="1" class=""><span class="tooltip-container"></span>val me = Person("Brian", 36)
+</span><span id="2" class="snippet-error tooltip"><span class="tooltip-container" label="Reassignment to val age"></span>me.age = 37
+</span></code></pre>
+  </div> 
+  <p>While you <em>can</em> enable mutation of members as part of the public interface, it's not recommended.</p> 
+  <div class="snippet" scala-snippet>
+   <div class="buttons"></div>
+   <pre><code class="language-scala"><span id="0" class=""><span class="tooltip-container"></span>case class Person(name: String, var age: Int)
+</span><span id="1" class=""><span class="tooltip-container"></span>val me = Person("Brian", 36)
+</span><span id="2" class=""><span class="tooltip-container"></span>me.age = 37
+</span><span id="3" class=""><span class="tooltip-container"></span>
+</span><span id="4" class=""><span class="tooltip-container"></span>println(me)
+</span></code></pre>
+  </div> 
+  <p>All case classes come with a <code>.copy</code> method that allows you to create a new instance of the case class with some fields changed.</p> 
+  <div class="snippet" scala-snippet>
+   <div class="buttons"></div>
+   <pre><code class="language-scala"><span id="0" class=""><span class="tooltip-container"></span>case class Person(name: String, age: Int):
+</span><span id="1" class=""><span class="tooltip-container"></span>  def happyBirthday: Person = copy(age = age + 1)
+</span><span id="2" class=""><span class="tooltip-container"></span>
+</span><span id="3" class=""><span class="tooltip-container"></span>val meRightNow = Person("Brian", 36)
+</span><span id="4" class=""><span class="tooltip-container"></span>val meAfterBirthday = meRightNow.happyBirthday
+</span><span id="5" class=""><span class="tooltip-container"></span>
+</span><span id="6" class=""><span class="tooltip-container"></span>println(meRightNow)
+</span><span id="7" class=""><span class="tooltip-container"></span>println(meAfterBirthday)
+</span><span id="8" class=""><span class="tooltip-container"></span>
+</span><span id="9" class=""><span class="tooltip-container"></span>val anotherMe = meRightNow.copy(age = 37)
+</span><span id="10" class=""><span class="tooltip-container"></span>println(anotherMe == meAfterBirthday) // true
+</span></code></pre>
+  </div> 
+  <p>This snippet highlights another aspect of case classes: equality is based on the contents of the case class, not the in-memory reference. This means that if you have two case classes of the same type with the same contents, they are considered equal.</p> 
+  <p>Case classes with different nominal types that happen to have the same contents are not considered equal by default.</p> 
+  <div class="snippet" scala-snippet>
+   <div class="buttons"></div>
+   <pre><code class="language-scala"><span id="0" class=""><span class="tooltip-container"></span>case class Person(name: String, age: Int):
+</span><span id="1" class=""><span class="tooltip-container"></span>  def asRobot: Robot = Robot(name, age)
+</span><span id="2" class=""><span class="tooltip-container"></span>
+</span><span id="3" class=""><span class="tooltip-container"></span>case class Robot(name: String, age: Int)
+</span><span id="4" class=""><span class="tooltip-container"></span>
+</span><span id="5" class=""><span class="tooltip-container"></span>val me = Person("Brian", 36)
+</span><span id="6" class=""><span class="tooltip-container"></span>val robotMe = me.asRobot
+</span><span id="7" class=""><span class="tooltip-container"></span>
+</span><span id="8" class=""><span class="tooltip-container"></span>println(me)
+</span><span id="9" class=""><span class="tooltip-container"></span>println(robotMe)
+</span><span id="10" class=""><span class="tooltip-container"></span>println(me == robotMe) // false
+</span></code></pre>
+  </div> 
+ </body>
+</html></div></main><footer><div id="generated-by"><span class="footer-text">Generated by</span><a href="https://github.com/lampepfl/dotty/tree/master/scaladoc"><img src="images/scaladoc_logo.svg" alt="scaladoc" class="scaladoc_logo"></img><img src="images/scaladoc_logo_dark.svg" alt="scaladoc" class="scaladoc_logo_dark"></img></a></div><div class="socials"><span class="footer-text">Social links</span><a href="https://github.com/brianloveswords/scala3-examples"><span class="social-icon" data-icon-path="github-icon-black.png"></span></a><a href="https://twitter.com/brianloveswords"><span class="social-icon" data-icon-path="twitter-icon-black.png"></span></a></div><div class="mode"><span class="footer-text">Mode</span><label id="theme-toggle" class="switch"><input type="checkbox"></input><span class="slider"></span></label></div><span class="go-to-top-icon"><a href="#container"><span class="icon-vertical_align_top"></span><span class="footer-text">Back to top</span></a></span></footer></div></div></body></html>

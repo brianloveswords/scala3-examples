@@ -1,0 +1,211 @@
+<html><head><meta charset="utf-8"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><title>Enums</title><link rel="shortcut icon" type="image/x-icon" href="favicon.ico"></link><script type="text/javascript" src="scripts/theme.js"></script><script type="text/javascript" src="scripts/searchData.js" defer="true"></script><script type="text/javascript" src="scripts/scastieConfiguration.js" defer="true"></script><link rel="stylesheet" href="styles/nord-light.css"></link><link rel="stylesheet" href="styles/scalastyle.css"></link><link rel="stylesheet" href="styles/colors.css"></link><link rel="stylesheet" href="styles/dotty-icons.css"></link><link rel="stylesheet" href="styles/diagram.css"></link><link rel="stylesheet" href="styles/filter-bar.css"></link><link rel="stylesheet" href="styles/code-snippets.css"></link><link rel="stylesheet" href="styles/searchbar.css"></link><link rel="stylesheet" href="styles/social-links.css"></link><link rel="stylesheet" href="styles/ux.css"></link><link rel="stylesheet" href="styles/versions-dropdown.css"></link><link rel="stylesheet" href="styles/fontawesome.css"></link><script type="text/javascript" src="hljs/highlight.pack.js" defer="true"></script><script type="text/javascript" src="scripts/hljs-scala3.js" defer="true"></script><script type="text/javascript" src="scripts/ux.js" defer="true"></script><script type="text/javascript" src="scripts/common/component.js" defer="true"></script><script type="text/javascript" src="scripts/common/utils.js" defer="true"></script><script type="text/javascript" src="scripts/components/FilterBar.js" defer="true"></script><script type="text/javascript" src="scripts/components/DocumentableList.js" defer="true"></script><script type="text/javascript" src="scripts/components/Input.js" defer="true"></script><script type="text/javascript" src="scripts/components/FilterGroup.js" defer="true"></script><script type="text/javascript" src="scripts/components/Filter.js" defer="true"></script><script type="text/javascript" src="scripts/scaladoc-scalajs.js" defer="true"></script><script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js" defer="true"></script><script type="text/javascript" src="https://d3js.org/d3.v6.min.js" defer="true"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/graphlib-dot@0.6.2/dist/graphlib-dot.min.js" defer="true"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dagre-d3/0.6.1/dagre-d3.min.js" defer="true"></script><script type="text/javascript" src="https://scastie.scala-lang.org/embedded.js" defer="true"></script><script type="text/javascript" src="scripts/data.js" defer="true"></script><script>var pathToRoot = "";</script></head><body><div id="container"><div id="leftColumn"><div id="logo"><span><div class="projectName">Scala 3 By Example</div></span><div id="version"><div class="versions-dropdown"><div onclick="dropdownHandler()" id="dropdown-button" class="dropdownbtn dropdownbtnactive"><div class="projectVersion">1.0.0</div><div id="dropdown-content" class="dropdown-content"><input type="text" placeholder="Search..." id="dropdown-input" onkeyup="filterFunction()"></input></div></div></div></div><div class="socials"><a href="https://github.com/brianloveswords/scala3-examples"><span class="social-icon" data-icon-path="github-icon-white.png"></span></a><a href="https://twitter.com/brianloveswords"><span class="social-icon" data-icon-path="twitter-icon-white.png"></span></a></div></div><div id="paneSearch"></div><nav id="sideMenu2"><div class="ni expanded"><span class="nh expanded"><span class="ar"></span><a href="docs/index.html"><span>Scala 3 By Example</span></a></span><div class="ni "><span class="nh "><a href="index.html"><span>Welcome</span></a></span></div><div class="ni "><span class="nh "><a href="hello-world.html"><span>Hello World</span></a></span></div><div class="ni "><span class="nh "><a href="values.html"><span>Values</span></a></span></div><div class="ni "><span class="nh "><a href="variables.html"><span>Variables</span></a></span></div><div class="ni "><span class="nh "><a href="functions.html"><span>Functions</span></a></span></div><div class="ni "><span class="nh "><a href="if-else.html"><span>If/Else</span></a></span></div><div class="ni "><span class="nh "><a href="unit.html"><span>Unit</span></a></span></div><div class="ni "><span class="nh "><a href="holes.html"><span>Holes</span></a></span></div><div class="ni "><span class="nh "><a href="tuples.html"><span>Tuples</span></a></span></div><div class="ni "><span class="nh "><a href="case-classes.html"><span>Case Classes</span></a></span></div><div class="ni "><span class="nh "><a href="options.html"><span>Options</span></a></span></div><div class="ni "><span class="nh "><a href="eithers.html"><span>Eithers</span></a></span></div><div class="ni expanded"><span class="nh selected"><a href="enums.html"><span>Enums</span></a></span></div><div class="ni "><span class="nh "><a href="traits.html"><span>Traits</span></a></span></div><div class="ni "><span class="nh "><a href="lists.html"><span>Lists</span></a></span></div><div class="ni "><span class="nh "><a href="smart-constructors.html"><span>Smart Constructors</span></a></span></div><div class="ni"><span class="nh "><span class="ar"></span><a href="api/index.html"><span>API</span></a></span><div class="ni"><span class="nh "><span class="ar"></span><a href="_empty_.html"><span class="micon pa"></span><span>&lt;empty&gt;</span></a></span><div class="ni "><span class="nh "><a href="_empty_/holes$.html"><span class="micon ob"></span><span>holes</span></a></span></div><div class="ni "><span class="nh "><a href="_empty_/holes_sc$.html"><span class="micon ob"></span><span>holes_sc</span></a></span></div><div class="ni "><span class="nh "><a href="_empty_/main.html"><span class="micon cl"></span><span>main</span></a></span></div><div class="ni"><span class="nh "><span class="ar"></span><a href="_empty_/values$.html"><span class="micon ob"></span><span>values</span></a></span><div class="ni"><span class="nh "><span class="ar"></span><a href="_empty_/values$$Error.html"><span class="micon en"></span><span>Error</span></a></span><div class="ni "><span class="nh "><a href="_empty_/values$$Error$$TooLow.html"><span class="micon ca"></span><span>TooLow</span></a></span></div><div class="ni "><span class="nh "><a href="_empty_/values$$Error$$TooHigh.html"><span class="micon ca"></span><span>TooHigh</span></a></span></div><div class="ni "><span class="nh "><a href="_empty_/values$$Error$$NotANumber.html"><span class="micon ca"></span><span>NotANumber</span></a></span></div></div><div class="ni "><span class="nh "><a href="_empty_/values$$Volume.html"><span class="micon cl"></span><span>Volume</span></a></span></div><div class="ni "><span class="nh "><a href="_empty_/values$$Volume$.html"><span class="micon ob"></span><span>Volume</span></a></span></div></div><div class="ni "><span class="nh "><a href="_empty_/values_sc$.html"><span class="micon ob"></span><span>values_sc</span></a></span></div></div><div class="ni"><span class="nh "><span class="ar"></span><a href="tests.html"><span class="micon pa"></span><span>tests</span></a></span><div class="ni "><span class="nh "><a href="tests/holes$.html"><span class="micon ob"></span><span>holes</span></a></span></div><div class="ni "><span class="nh "><a href="tests/holes_sc$.html"><span class="micon ob"></span><span>holes_sc</span></a></span></div><div class="ni"><span class="nh "><span class="ar"></span><a href="tests/values$.html"><span class="micon ob"></span><span>values</span></a></span><div class="ni "><span class="nh "><a href="tests/values$$Channel.html"><span class="micon cl"></span><span>Channel</span></a></span></div><div class="ni"><span class="nh "><span class="ar"></span><a href="tests/values$$Error.html"><span class="micon en"></span><span>Error</span></a></span><div class="ni "><span class="nh "><a href="tests/values$$Error$$TooLow.html"><span class="micon ca"></span><span>TooLow</span></a></span></div><div class="ni "><span class="nh "><a href="tests/values$$Error$$TooHigh.html"><span class="micon ca"></span><span>TooHigh</span></a></span></div><div class="ni "><span class="nh "><a href="tests/values$$Error$$NotANumber.html"><span class="micon ca"></span><span>NotANumber</span></a></span></div></div><div class="ni "><span class="nh "><a href="tests/values$$Volume.html"><span class="micon cl"></span><span>Volume</span></a></span></div><div class="ni "><span class="nh "><a href="tests/values$$Volume$.html"><span class="micon ob"></span><span>Volume</span></a></span></div></div><div class="ni "><span class="nh "><a href="tests/values_sc$.html"><span class="micon ob"></span><span>values_sc</span></a></span></div></div></div></div></nav></div><div id="main"><div id="leftToggler"><span class="icon-toggler"></span></div><div id="scaladoc-searchBar"></div><main id="main-content"><div class="breadcrumbs container"><a href="docs/index.html">Scala 3 By Example</a>/<a href="enums.html">Enums</a></div><div id="content"><html>
+ <head></head>
+ <body>
+  <h1><a href="#enums" id="enums" class="anchor"></a>Enums</h1> 
+  <p>An <code>enum</code> in Scala is similar from what you might be used to in languages like Go or C, but with a lot more expressive power.</p> 
+  <p>In other languages, an enumeration is a set of named constants that point to concrete values that are already part of the type system. There is usually a type alias to help with readability.</p> 
+  <div class="snippet"> 
+   <pre><code class="language-go">package main
+
+import "fmt"
+
+type Season int64
+
+const (
+	Summer Season = iota
+	Autumn
+	Winter
+	Spring
+)
+
+func (s Season) String() string {
+	switch s {
+	case Summer:
+		return "summer"
+	case Autumn:
+		return "autumn"
+	case Winter:
+		return "winter"
+	case Spring:
+		return "Spring"
+	}
+	// the switch statement covers all the cases,
+	// but the compiler doesn't know that so we must
+	// include this even though it's unreachable.
+	return "unknown"
+}
+
+func main() {
+	x := Spring
+	fmt.Println(x)
+}
+</code></pre> 
+  </div> 
+  <p>The opaque type alias <code>Season</code> makes this a bit safer, but internally it is still an <code>int64</code> in disguise.</p> 
+  <p>In Scala, we would model this data with an <code>enum</code>. When we do this, we are <em>inventing a whole new type that did not exist before</em>. These are not internally represented by strings or ints or anything else! We get to invent terms from whole cloth that inhabit that brand new type.</p> 
+  <div class="snippet" scala-snippet>
+   <div class="buttons"></div>
+   <pre><code class="language-scala"><span id="0" class=""><span class="tooltip-container"></span>enum Season:
+</span><span id="1" class=""><span class="tooltip-container"></span>  case Summer
+</span><span id="2" class=""><span class="tooltip-container"></span>  case Autumn
+</span><span id="3" class=""><span class="tooltip-container"></span>  case Winter
+</span><span id="4" class=""><span class="tooltip-container"></span>  case Spring
+</span><span id="5" class=""><span class="tooltip-container"></span>
+</span><span id="6" class=""><span class="tooltip-container"></span>  // We get the `toString` for free, so let's
+</span><span id="7" class=""><span class="tooltip-container"></span>  // do something different
+</span><span id="8" class=""><span class="tooltip-container"></span>  def toEmoji: String = this match
+</span><span id="9" class=""><span class="tooltip-container"></span>    case Summer =&gt; "🌞"
+</span><span id="10" class=""><span class="tooltip-container"></span>    case Autumn =&gt; "🍂"
+</span><span id="11" class=""><span class="tooltip-container"></span>    case Winter =&gt; "🌨"
+</span><span id="12" class=""><span class="tooltip-container"></span>    case Spring =&gt; "🌻"
+</span><span id="13" class=""><span class="tooltip-container"></span>
+</span><span id="14" class=""><span class="tooltip-container"></span>// Create a "companion object" to the Season enum,
+</span><span id="15" class=""><span class="tooltip-container"></span>// which gives a nice namespace to put related functions
+</span><span id="16" class=""><span class="tooltip-container"></span>object Season:
+</span><span id="17" class=""><span class="tooltip-container"></span>  def parse(s: String): Either[String, Season] = s.toLowerCase match
+</span><span id="18" class=""><span class="tooltip-container"></span>    case "summer" =&gt; Right(Summer)
+</span><span id="19" class=""><span class="tooltip-container"></span>    case "autumn" =&gt; Right(Autumn)
+</span><span id="20" class=""><span class="tooltip-container"></span>    case "winter" =&gt; Right(Winter)
+</span><span id="21" class=""><span class="tooltip-container"></span>    case "spring" =&gt; Right(Spring)
+</span><span id="22" class=""><span class="tooltip-container"></span>    // This will match anything left over
+</span><span id="23" class=""><span class="tooltip-container"></span>    // and prevent the compiler from warning
+</span><span id="24" class=""><span class="tooltip-container"></span>    // us about an inexhaustive pattern
+</span><span id="25" class=""><span class="tooltip-container"></span>    case _ =&gt; Left(s"Unknown season: $s")
+</span><span id="26" class=""><span class="tooltip-container"></span>
+</span><span id="27" class=""><span class="tooltip-container"></span>  def celebrate(input: String): String = parse(input) match
+</span><span id="28" class=""><span class="tooltip-container"></span>    // Handle the success case
+</span><span id="29" class=""><span class="tooltip-container"></span>    case Right(season) =&gt;
+</span><span id="30" class=""><span class="tooltip-container"></span>      val emoji = season.toEmoji
+</span><span id="31" class=""><span class="tooltip-container"></span>      season match
+</span><span id="32" class=""><span class="tooltip-container"></span>        case Winter =&gt; s"brr bundle up for ${emoji}"
+</span><span id="33" class=""><span class="tooltip-container"></span>        case _      =&gt; s"I love a nice ${season} day ${emoji}!"
+</span><span id="34" class=""><span class="tooltip-container"></span>
+</span><span id="35" class=""><span class="tooltip-container"></span>    // Handle the failure case
+</span><span id="36" class=""><span class="tooltip-container"></span>    case Left(error) =&gt; error
+</span><span id="37" class=""><span class="tooltip-container"></span>
+</span><span id="38" class=""><span class="tooltip-container"></span>println(Season.celebrate("autumn"))
+</span></code></pre>
+  </div> 
+  <h2><a href="#exhausitivty-checking" id="exhausitivty-checking" class="anchor"></a>Exhausitivty Checking</h2> 
+  <p>Using <code>enum</code> and pattern matching gives us something called "exhaustiveness checking". The compiler knows all of the possible values of the <code>Season</code> enum, and can make sure we covered them all in the <code>match</code> expression.</p> 
+  <p>This means if we discover a new season, we can add it to the <code>Season</code> enum then let the compiler guide us to what places in code need to change</p> 
+  <div class="snippet" scala-snippet>
+   <div class="buttons"></div>
+   <pre><code class="language-scala"><span id="0" class=""><span class="tooltip-container"></span>enum Season:
+</span><span id="1" class=""><span class="tooltip-container"></span>  case Summer
+</span><span id="2" class=""><span class="tooltip-container"></span>  case Autumn
+</span><span id="3" class=""><span class="tooltip-container"></span>  case Winter
+</span><span id="4" class=""><span class="tooltip-container"></span>  case Spring
+</span><span id="5" class=""><span class="tooltip-container"></span>  // newly discovered
+</span><span id="6" class=""><span class="tooltip-container"></span>  case FifthSeason
+</span><span id="7" class=""><span class="tooltip-container"></span>
+</span><span id="8" class=""><span class="tooltip-container"></span>
+</span><span id="9" class=""><span class="tooltip-container"></span>// imagine this is in a different file, maybe even
+</span><span id="10" class=""><span class="tooltip-container"></span>// a different package altogether. the compiler will
+</span><span id="11" class=""><span class="tooltip-container"></span>// warn us we aren't handling all the cases once we add
+</span><span id="12" class=""><span class="tooltip-container"></span>// `FifthSeason`
+</span><span id="13" class="snippet-warn tooltip"><span class="tooltip-container" label="match may not be exhaustive.
+It would fail on pattern case: FifthSeason
+"></span>def handleSeasons(season: Season): String = season match
+</span><span id="14" class=""><span class="tooltip-container"></span>  case Season.Summer =&gt; "hot"
+</span><span id="15" class=""><span class="tooltip-container"></span>  case Season.Autumn =&gt; "temperate"
+</span><span id="16" class=""><span class="tooltip-container"></span>  case Season.Winter =&gt; "cold"
+</span><span id="17" class=""><span class="tooltip-container"></span>  case Season.Spring =&gt; "nice"
+</span><span id="18" class=""><span class="tooltip-container"></span>
+</span><span id="19" class=""><span class="tooltip-container"></span>// this will end the world!
+</span><span id="20" class=""><span class="tooltip-container"></span>println(handleSeasons(Season.FifthSeason))
+</span></code></pre>
+  </div> 
+  <p>When we need to make changes, we make changes to the data model <em>first</em> and then change function implementations as guided by the compiler.</p> 
+  <h2><a href="#containers" id="containers" class="anchor"></a>Containers</h2> 
+  <p><code>enum</code> is even more powerful. We discussed <code>Option</code> and <code>Either</code> before, and both of these types can be represented using <code>enum</code>.</p> 
+  <div class="snippet" scala-snippet>
+   <div class="buttons"></div>
+   <pre><code class="language-scala"><span id="0" class=""><span class="tooltip-container"></span>// the `+A` means we want to accept subtypes of A,
+</span><span id="1" class=""><span class="tooltip-container"></span>// so the type `Maybe[Exception]` allows
+</span><span id="2" class=""><span class="tooltip-container"></span>// `Just(RuntimeException("whoops"))`
+</span><span id="3" class=""><span class="tooltip-container"></span>enum Maybe[+A]:
+</span><span id="4" class=""><span class="tooltip-container"></span>  case Yep(a: A)
+</span><span id="5" class=""><span class="tooltip-container"></span>  case Nope
+</span><span id="6" class=""><span class="tooltip-container"></span>
+</span><span id="7" class=""><span class="tooltip-container"></span>// this lets us use `Just` and `Nothing`
+</span><span id="8" class=""><span class="tooltip-container"></span>// without having to prefix them with `Maybe`
+</span><span id="9" class=""><span class="tooltip-container"></span>import Maybe.*
+</span><span id="10" class=""><span class="tooltip-container"></span>
+</span><span id="11" class=""><span class="tooltip-container"></span>val x = Yep("hello")
+</span><span id="12" class=""><span class="tooltip-container"></span>val result = x match
+</span><span id="13" class=""><span class="tooltip-container"></span>  case Yep(s) =&gt; s"Yep, we got $s"
+</span><span id="14" class=""><span class="tooltip-container"></span>  case Nope    =&gt; "Nope, we got nothin'"
+</span><span id="15" class=""><span class="tooltip-container"></span>
+</span><span id="16" class=""><span class="tooltip-container"></span>println(result)
+</span></code></pre>
+  </div> 
+  <h2><a href="#business-data-modeling" id="business-data-modeling" class="anchor"></a>Business data modeling</h2> 
+  <p><code>enum</code> is useful for modeling business data. For example, maybe we have two ways of accepting addresses: for international we just need their country and postal code, but for US we need their full address.</p> 
+  <div class="snippet" scala-snippet>
+   <div class="buttons"></div>
+   <pre><code class="language-scala"><span id="0" class=""><span class="tooltip-container"></span>enum Address(country: String, postalCode: String):
+</span><span id="1" class=""><span class="tooltip-container"></span>  case UnitedStates(
+</span><span id="2" class=""><span class="tooltip-container"></span>    street: String,
+</span><span id="3" class=""><span class="tooltip-container"></span>    city: String,
+</span><span id="4" class=""><span class="tooltip-container"></span>    state: String,
+</span><span id="5" class=""><span class="tooltip-container"></span>    zipCode: String,
+</span><span id="6" class=""><span class="tooltip-container"></span>  ) extends Address("US", zipCode)
+</span><span id="7" class=""><span class="tooltip-container"></span>
+</span><span id="8" class=""><span class="tooltip-container"></span>  case International(
+</span><span id="9" class=""><span class="tooltip-container"></span>    country: String,
+</span><span id="10" class=""><span class="tooltip-container"></span>    postalCode: String,
+</span><span id="11" class=""><span class="tooltip-container"></span>  ) extends Address(country, postalCode)
+</span><span id="12" class=""><span class="tooltip-container"></span>
+</span><span id="13" class=""><span class="tooltip-container"></span>object Order:
+</span><span id="14" class=""><span class="tooltip-container"></span>  def calculateShipping(address: Address): BigDecimal = address match
+</span><span id="15" class=""><span class="tooltip-container"></span>    // do something fancy with state and zipCode
+</span><span id="16" class=""><span class="tooltip-container"></span>    // to figure it out
+</span><span id="17" class=""><span class="tooltip-container"></span>    case Address.UnitedStates(_, _, state, zipCode) =&gt;
+</span><span id="18" class=""><span class="tooltip-container"></span>      BigDecimal(5)
+</span><span id="19" class=""><span class="tooltip-container"></span>
+</span><span id="20" class=""><span class="tooltip-container"></span>    // flat rate shipping internationally.
+</span><span id="21" class=""><span class="tooltip-container"></span>    // the `case _: &lt;type&gt;` form allows us to match on
+</span><span id="22" class=""><span class="tooltip-container"></span>    // just type if we don't care about what's inside.
+</span><span id="23" class=""><span class="tooltip-container"></span>    // we could also name the variable, `case x: &lt;type&gt;`
+</span><span id="24" class=""><span class="tooltip-container"></span>    // if we did need access to it match arm.
+</span><span id="25" class=""><span class="tooltip-container"></span>    case _: Address.International =&gt;
+</span><span id="26" class=""><span class="tooltip-container"></span>      BigDecimal(10)
+</span><span id="27" class=""><span class="tooltip-container"></span>
+</span><span id="28" class=""><span class="tooltip-container"></span>
+</span><span id="29" class=""><span class="tooltip-container"></span>val us = Address.UnitedStates(
+</span><span id="30" class=""><span class="tooltip-container"></span>  street = "123 Main St",
+</span><span id="31" class=""><span class="tooltip-container"></span>  city = "Anytown",
+</span><span id="32" class=""><span class="tooltip-container"></span>  state = "CA",
+</span><span id="33" class=""><span class="tooltip-container"></span>  zipCode =  "90210",
+</span><span id="34" class=""><span class="tooltip-container"></span>)
+</span><span id="35" class=""><span class="tooltip-container"></span>
+</span><span id="36" class=""><span class="tooltip-container"></span>val de = Address.International(
+</span><span id="37" class=""><span class="tooltip-container"></span>  country = "DE",
+</span><span id="38" class=""><span class="tooltip-container"></span>  postalCode = "10",
+</span><span id="39" class=""><span class="tooltip-container"></span>)
+</span><span id="40" class=""><span class="tooltip-container"></span>
+</span><span id="41" class=""><span class="tooltip-container"></span>val usShipping = Order.calculateShipping(us)
+</span><span id="42" class=""><span class="tooltip-container"></span>val deShipping = Order.calculateShipping(de)
+</span><span id="43" class=""><span class="tooltip-container"></span>println(s"${us}: ${usShipping}")
+</span><span id="44" class=""><span class="tooltip-container"></span>println(s"${de}: ${deShipping}")
+</span></code></pre>
+  </div> 
+  <h2><a href="#scala-2-sealed-trait" id="scala-2-sealed-trait" class="anchor"></a>Scala 2: <code>sealed trait</code></h2> 
+  <p>Prior to Scala 3, enumerations would have been implemented as a <code>sealed trait</code>. The <code>Season</code> enum above would have been represented like this:</p> 
+  <div class="snippet" scala-snippet>
+   <div class="buttons"></div>
+   <pre><code class="language-scala"><span id="0" class=""><span class="tooltip-container"></span>// `trait` lets us invent a new type, and `sealed`
+</span><span id="1" class=""><span class="tooltip-container"></span>// means it cannot be extended outside of the file
+</span><span id="2" class=""><span class="tooltip-container"></span>// that defined it. This allows exhaustiveness checking.
+</span><span id="3" class=""><span class="tooltip-container"></span>sealed trait Season
+</span><span id="4" class=""><span class="tooltip-container"></span>object Season {
+</span><span id="5" class=""><span class="tooltip-container"></span>  case object Summer extends Season
+</span><span id="6" class=""><span class="tooltip-container"></span>  case object Autumn extends Season
+</span><span id="7" class=""><span class="tooltip-container"></span>  case object Winter extends Season
+</span><span id="8" class=""><span class="tooltip-container"></span>  case object Spring extends Season
+</span><span id="9" class=""><span class="tooltip-container"></span>}
+</span></code></pre>
+  </div> 
+ </body>
+</html></div></main><footer><div id="generated-by"><span class="footer-text">Generated by</span><a href="https://github.com/lampepfl/dotty/tree/master/scaladoc"><img src="images/scaladoc_logo.svg" alt="scaladoc" class="scaladoc_logo"></img><img src="images/scaladoc_logo_dark.svg" alt="scaladoc" class="scaladoc_logo_dark"></img></a></div><div class="socials"><span class="footer-text">Social links</span><a href="https://github.com/brianloveswords/scala3-examples"><span class="social-icon" data-icon-path="github-icon-black.png"></span></a><a href="https://twitter.com/brianloveswords"><span class="social-icon" data-icon-path="twitter-icon-black.png"></span></a></div><div class="mode"><span class="footer-text">Mode</span><label id="theme-toggle" class="switch"><input type="checkbox"></input><span class="slider"></span></label></div><span class="go-to-top-icon"><a href="#container"><span class="icon-vertical_align_top"></span><span class="footer-text">Back to top</span></a></span></footer></div></div></body></html>
