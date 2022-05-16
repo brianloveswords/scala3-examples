@@ -27,6 +27,11 @@ $ brew install Virtuslab/scala-cli/scala-cli
 - [Traits](traits.html)
 - [Lists](lists.html)
 - [Smart Constructors](smart-constructors.html)
+
+More coming soon.
+
+<!--
+
 - Slices
 - Maps
 - Range
@@ -98,3 +103,5 @@ $ brew install Virtuslab/scala-cli/scala-cli
 - Exec'ing Processes
 - Signals
 - Exit
+
+-->
