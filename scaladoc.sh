@@ -2,6 +2,9 @@
 
 set -euo pipefail
 
+INPUT_DIR=_docs
+OUTPUT_DIR=docs
+
 function main {
     mkdir -p docs
 
@@ -12,10 +15,10 @@ function main {
         -default-template "static-site-main" \
         -author \
         -groups \
-        -d "docs" \
+        -d "${OUTPUT_DIR}" \
         -project "Scala 3 By Example" \
-        -snippet-compiler:_docs=compile \
-        -siteroot "_docs" \
+        -snippet-compiler:${INPUT_DIR}=compile \
+        -siteroot ${INPUT_DIR} \
         -classpath "vendor/cats-core_3-2.7.0.jar:vendor/cats-effect_3-3.4-389-3862cf0.jar" \
         . # -Ygenerate-inkuire \
 
