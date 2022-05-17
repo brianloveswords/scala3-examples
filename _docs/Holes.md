@@ -32,10 +32,6 @@ Exception in thread "main" scala.NotImplementedError: an implementation is missi
 While it looks like syntax, `???` is a function defined in the `scala.Predef` object that is always in scope by default for every Scala program. The definition of that function looks like this:
 
 ```scala
-/** `???` can be used for marking methods that remain to be implemented.
- *  @throws NotImplementedError when `???` is invoked.
- *  @group utilities
- */
 def ??? : Nothing = throw new NotImplementedError
 ```
 
