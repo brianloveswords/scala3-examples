@@ -7,12 +7,11 @@ To skip the implementation of something, you can use `???`. It fits into any typ
 ```scala
 // file: holes.sc
 def calculatePrice(
-  units: Int,
   quantity: Int,
   listPrice: BigDecimal,
 ): BigDecimal = ???
 
-calculatePrice(2, 9, BigDecimal(3.99))
+calculatePrice(9, BigDecimal(3.99))
 ```
 
 ```shell
